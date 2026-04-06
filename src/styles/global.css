@@ -1,1 +1,91 @@
 @import "tailwindcss";
+
+@theme {
+  --color-forest: #1a3a35;
+  --color-forest-dark: #122926;
+  --color-forest-light: #254d45;
+  --color-gold: #c9a96e;
+  --color-gold-light: #d4b87e;
+  --color-cream: #f8f8f6;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #c9a96e 0%, #d4b87e 50%, #c9a96e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold underline accent */
+.gold-underline {
+  position: relative;
+}
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: #c9a96e;
+  border-radius: 2px;
+}
+.gold-underline-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Nav link hover */
+.nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #c9a96e;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
+.nav-link:hover { color: #c9a96e; }
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.15);
+}
