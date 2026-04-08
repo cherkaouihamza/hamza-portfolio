@@ -1,8 +1,188 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const cases = [
+  {
+    id: 1,
+    sector: "Institution Publique",
+    sectorColor: "text-sky-700 bg-sky-50",
+    icon: `<svg width="32" height="32" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="16" y1="13" x2="8" y2="13"/>
+      <line x1="16" y1="17" x2="8" y2="17"/>
+      <polyline points="10 9 9 9 8 9"/>
+    </svg>`,
+    title: "Digitalisation Complète des Processus Documentaires",
+    problem: {
+      title: "Problématique",
+      text: "Des processus entièrement manuels et basés sur le papier généraient des inefficacités majeures, des délais importants et une charge administrative excessive, impactant directement la qualité de service.",
+    },
+    solution: {
+      title: "Solution",
+      text: "Mise en place d'une dématérialisation complète des flux documentaires avec déploiement d'outils digitaux adaptés et accompagnement au changement auprès des équipes.",
+    },
+    results: [
+      { value: "0", label: "Processus papier", sub: "100% dématérialisé" },
+      { value: "−65%", label: "Temps de traitement", sub: "Gain immédiat" },
+      { value: "↑ RH", label: "Optimisation des ressources", sub: "Significative" },
+    ],
+  },
+  {
+    id: 2,
+    sector: "Secteur Financier",
+    sectorColor: "text-emerald-700 bg-emerald-50",
+    icon: `<svg width="32" height="32" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <rect x="2" y="3" width="20" height="14" rx="2"/>
+      <path d="M8 21h8M12 17v4"/>
+      <path d="M6 8h.01M6 11h.01"/>
+      <path d="M10 8h8M10 11h5"/>
+    </svg>`,
+    title: "Développement d'une Plateforme SupTech de Reporting Automatisé",
+    problem: {
+      title: "Problématique",
+      text: "Un reporting entièrement manuel nécessitait 2 mois complets par cycle, mobilisant des ressources importantes et générant des risques d'erreurs élevés à chaque itération.",
+    },
+    solution: {
+      title: "Solution",
+      text: "Développement d'une plateforme SupTech sur mesure intégrant l'automatisation du reporting, l'interprétation intelligente des données et la génération automatique de rapports conformes.",
+    },
+    results: [
+      { value: "30s", label: "Par cycle de reporting", sub: "Contre 2 mois" },
+      { value: "100%", label: "Automatisé", sub: "Zéro intervention manuelle" },
+      { value: "0", label: "Erreur manuelle", sub: "Fiabilité totale" },
+    ],
+  },
+];
 ---
-<Layout title="Case Studies — Hamza Cherkaoui">
-  <div class="max-w-6xl mx-auto px-6 py-24">
-    <h1 class="text-3xl font-bold tracking-tight text-[#0F172A]">Case Studies</h1>
-  </div>
+
+<Layout
+  title="Études de Cas — Hamza Cherkaoui"
+  description="Études de cas concrets : digitalisation des processus et plateforme SupTech de reporting automatisé."
+>
+
+  <!-- ════════════════════════════════════════
+       PAGE HERO
+  ════════════════════════════════════════ -->
+  <section class="bg-[#1a3a35] text-white pt-16 pb-20 px-6">
+    <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-5">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+        Études de Cas
+      </h1>
+      <p class="text-white/70 text-lg leading-relaxed max-w-xl">
+        Des résultats concrets et mesurables pour mes clients.
+      </p>
+      <!-- Gold divider -->
+      <div class="w-16 h-[3px] rounded-full bg-[#c9a96e] mt-1"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       CASE STUDY CARDS
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-20 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col gap-10">
+
+      {cases.map((c, i) => (
+        <article class={`bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 reveal${i === 1 ? ' reveal-delay-1' : ''}`}>
+
+          <!-- Card top bar -->
+          <div class="bg-[#1a3a35]/4 border-b border-[#E2E8F0] px-8 py-5 flex flex-col sm:flex-row sm:items-center gap-4">
+            <!-- Icon + title -->
+            <div class="flex items-center gap-4 flex-1">
+              <div class="w-14 h-14 rounded-xl bg-[#c9a96e]/10 flex items-center justify-center flex-shrink-0">
+                <Fragment set:html={c.icon} />
+              </div>
+              <h2 class="text-lg md:text-xl font-bold text-[#1a3a35] leading-snug">{c.title}</h2>
+            </div>
+            <!-- Sector badge -->
+            <span class={`self-start sm:self-center text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full flex-shrink-0 ${c.sectorColor}`}>
+              {c.sector}
+            </span>
+          </div>
+
+          <!-- Problem + Solution (2-col on desktop) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#E2E8F0]">
+
+            <!-- Problem -->
+            <div class="px-8 py-7 flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-5 rounded-full bg-rose-400"></div>
+                <p class="text-xs font-bold uppercase tracking-widest text-[#1a3a35]">{c.problem.title}</p>
+              </div>
+              <p class="text-sm text-[#64748B] leading-relaxed">{c.problem.text}</p>
+            </div>
+
+            <!-- Solution -->
+            <div class="px-8 py-7 flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-5 rounded-full bg-[#c9a96e]"></div>
+                <p class="text-xs font-bold uppercase tracking-widest text-[#1a3a35]">{c.solution.title}</p>
+              </div>
+              <p class="text-sm text-[#64748B] leading-relaxed">{c.solution.text}</p>
+            </div>
+
+          </div>
+
+          <!-- Results stat boxes -->
+          <div class="border-t border-[#E2E8F0] bg-[#1a3a35]/[0.03] px-8 py-7">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#1a3a35] mb-5">Résultats obtenus</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {c.results.map(r => (
+                <div class="bg-white rounded-xl border border-[#E2E8F0] px-6 py-5 flex flex-col items-center text-center gap-1">
+                  <p class="text-3xl font-bold text-[#c9a96e] leading-none">{r.value}</p>
+                  <p class="text-sm font-semibold text-[#1a3a35] mt-1">{r.label}</p>
+                  <p class="text-xs text-[#64748B]">{r.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </article>
+      ))}
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       BOTTOM CTA
+  ════════════════════════════════════════ -->
+  <section class="bg-[#122926] py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 reveal">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white leading-snug">
+        Vous souhaitez des résultats similaires ?
+      </h2>
+      <p class="text-white/60 text-lg">
+        Discutons de votre projet et voyons comment je peux vous accompagner.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-10 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20"
+      >
+        Prendre contact
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
 </Layout>
+
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
