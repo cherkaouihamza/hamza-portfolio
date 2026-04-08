@@ -1,11 +1,14 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title?: string;
   description?: string;
 }
+
 const {
-  title = "Hamza Cherkaoui — Consultant · Formateur · PMO · Expert en Transformation Digitale",
-  description = "Accélérateur de performance organisationnelle. Consultant, Formateur, PMO et Expert en Transformation Digitale avec plus de 12 ans d'expérience."
+  title = "Hamza Cherkaoui — Formateur Expert en Management de Projet, PMO & IA",
+  description = "J'accompagne les entreprises et les professionnels à monter en compétences sur la gestion de projet, la gouvernance PMO et l'intégration de l'IA — avec des formations 100% pratiques et orientées résultats."
 } = Astro.props;
 ---
 <!doctype html>
@@ -21,18 +24,76 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-white text-gray-900">
-    <slot />
+  <body class="bg-white text-[#0F172A]">
+
+    <!-- ── Navbar ── -->
+    <header id="main-nav" class="sticky top-0 z-50 border-b border-[#c9a96e]/20" style="background-color:#1a3a35;transition:background-color 0.3s ease;">
+      <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <!-- Logo image (links to /) -->
+        <a href="/" class="flex-shrink-0">
+          <img src="/logo-hch.png" alt="Hamza Cherkaoui" class="h-[50px] object-contain" />
+        </a>
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <li><a href="/" class="nav-link text-white/80">Home</a></li>
+          <li><a href="/formations" class="nav-link text-white/80">Formations</a></li>
+          <li><a href="/case-studies" class="nav-link text-white/80">Case Studies</a></li>
+          <li><a href="/about" class="nav-link text-white/80">About</a></li>
+          <li>
+            <a href="/contact"
+               class="bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-5 py-2 rounded-lg transition-colors duration-200">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <!-- Mobile menu button -->
+        <button class="md:hidden p-2 text-white/80" aria-label="Menu">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <script>
+      const nav = document.getElementById('main-nav');
+      function updateNav() {
+        if (nav) {
+          nav.style.backgroundColor = window.scrollY > 10 ? '#122926' : '#1a3a35';
+        }
+      }
+      window.addEventListener('scroll', updateNav, { passive: true });
+      updateNav();
+    </script>
+
+    <!-- ── Page content ── -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="bg-[#F8FAFC] border-t border-[#E2E8F0]">
+      <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#64748B]">
+        <p class="font-semibold text-[#0F172A]">Hamza Cherkaoui</p>
+        <div class="flex flex-col md:flex-row items-center gap-4">
+          <a href="mailto:contact@hamzacherkaoui.com" class="hover:text-[#c9a96e] transition-colors">
+            contact@hamzacherkaoui.com
+          </a>
+          <span class="hidden md:inline text-[#E2E8F0]">|</span>
+          <a href="tel:+212600000000" class="hover:text-[#c9a96e] transition-colors">
+            +212 6 00 00 00 00
+          </a>
+        </div>
+        <p class="text-xs text-[#64748B]">© {new Date().getFullYear()} Hamza Cherkaoui</p>
+      </div>
+    </footer>
+
   </body>
 </html>
 
 <style>
-  html, body {
-    margin: 0;
-    width: 100%;
-  }
+  html, body { margin: 0; width: 100%; }
 </style>

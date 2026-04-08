@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-forest: #1a3a35;
-  --color-forest-dark: #122926;
+  /* ── Color Palette ── */
+  --color-forest:       #1a3a35;
+  --color-forest-dark:  #122926;
   --color-forest-light: #254d45;
-  --color-gold: #c9a96e;
-  --color-gold-light: #d4b87e;
-  --color-cream: #f8f8f6;
+  --color-gold:         #c9a96e;
+  --color-gold-light:   #d4b87e;
+  --color-cream:        #f8f8f6;
+
+  /* ── Typography ── */
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -19,12 +22,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Scroll animations */
+/* ── Scroll reveal ── */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .reveal.visible {
   opacity: 1;
@@ -35,7 +38,7 @@ body {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* Gradient text */
+/* ── Gradient text ── */
 .gradient-text {
   background: linear-gradient(135deg, #c9a96e 0%, #d4b87e 50%, #c9a96e 100%);
   -webkit-background-clip: text;
@@ -43,10 +46,8 @@ body {
   background-clip: text;
 }
 
-/* Gold underline accent */
-.gold-underline {
-  position: relative;
-}
+/* ── Gold underline ── */
+.gold-underline { position: relative; }
 .gold-underline::after {
   content: '';
   position: absolute;
@@ -62,7 +63,7 @@ body {
   transform: translateX(-50%);
 }
 
-/* Nav link hover */
+/* ── Nav link hover ── */
 .nav-link {
   position: relative;
   transition: color 0.2s;
@@ -80,7 +81,7 @@ body {
 .nav-link:hover::after { width: 100%; }
 .nav-link:hover { color: #c9a96e; }
 
-/* Card hover */
+/* ── Card hover ── */
 .card-hover {
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.3s ease;

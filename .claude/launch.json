@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Astro Dev",
+      "runtimeExecutable": "C:/node/node-v22.14.0-win-x64/node.exe",
+      "runtimeArgs": [
+        "C:/hch-portfolio/hamza-portfolio/node_modules/astro/bin/astro.mjs",
+        "dev",
+        "--root",
+        "C:/hch-portfolio/hamza-portfolio"
+      ],
+      "port": 4321
+    },
+    {
+      "name": "Astro Preview",
+      "runtimeExecutable": "C:/node/node-v22.14.0-win-x64/node.exe",
+      "runtimeArgs": [
+        "C:/hch-portfolio/hamza-portfolio/node_modules/astro/bin/astro.mjs",
+        "preview",
+        "--root",
+        "C:/hch-portfolio/hamza-portfolio"
+      ],
+      "port": 4321
+    }
+  ]
+}
