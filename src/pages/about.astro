@@ -1,8 +1,332 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const expertise = [
+  {
+    icon: `<svg width="26" height="26" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+      <rect x="9" y="3" width="6" height="4" rx="1"/>
+      <path d="m9 12 2 2 4-4"/>
+    </svg>`,
+    title: "Management de Projet",
+    tags: ["PMP", "PRINCE2", "Agile", "Scrum"],
+    description: "Maîtrise complète des standards internationaux et méthodologies de gestion de projet, du cadrage à la clôture.",
+  },
+  {
+    icon: `<svg width="26" height="26" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9 22 9 12 15 12 15 22"/>
+    </svg>`,
+    title: "Gouvernance PMO",
+    tags: ["Frameworks", "Reporting", "Portefeuille"],
+    description: "Structuration et pilotage de bureaux de projets performants, alignés sur la stratégie d'entreprise.",
+  },
+  {
+    icon: `<svg width="26" height="26" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/>
+      <circle cx="7.5" cy="14.5" r="1.5" fill="#c9a96e" stroke="none"/>
+      <circle cx="16.5" cy="14.5" r="1.5" fill="#c9a96e" stroke="none"/>
+    </svg>`,
+    title: "Intelligence Artificielle",
+    tags: ["Outils IA", "Automatisation", "Agents"],
+    description: "Intégration concrète de l'IA en entreprise : de la découverte des outils à l'automatisation des processus métier.",
+  },
+  {
+    icon: `<svg width="26" height="26" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+      <polyline points="16 7 22 7 22 13"/>
+    </svg>`,
+    title: "Transformation Digitale",
+    tags: ["Digitalisation", "Change Management"],
+    description: "Accompagnement des organisations dans leur transition numérique, de la stratégie à l'adoption par les équipes.",
+  },
+];
+
+const pillars = [
+  {
+    icon: `<svg width="28" height="28" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </svg>`,
+    title: "Théorie Essentielle",
+    description: "Les fondamentaux indispensables, sans superflu. Chaque concept est directement ancré dans la réalité terrain.",
+  },
+  {
+    icon: `<svg width="28" height="28" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+    </svg>`,
+    title: "Pratique Intensive",
+    description: "60 à 70% du temps consacré aux ateliers, exercices concrets et mises en situation sur des cas réels d'entreprise.",
+  },
+  {
+    icon: `<svg width="28" height="28" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 8v4l3 3"/>
+    </svg>`,
+    title: "Application Immédiate",
+    description: "Des outils, templates et méthodologies directement utilisables dès le lendemain de la formation.",
+  },
+];
 ---
-<Layout title="About — Hamza Cherkaoui">
-  <div class="max-w-6xl mx-auto px-6 py-24">
-    <h1 class="text-3xl font-bold tracking-tight text-[#0F172A]">About</h1>
-  </div>
+
+<Layout
+  title="À Propos — Hamza Cherkaoui"
+  description="Formateur expert en management de projet, gouvernance PMO et transformation digitale."
+>
+
+  <!-- ════════════════════════════════════════
+       PAGE HERO
+  ════════════════════════════════════════ -->
+  <section class="bg-[#1a3a35] text-white pt-16 pb-20 px-6">
+    <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-5">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+        À Propos
+      </h1>
+      <p class="text-white/70 text-lg leading-relaxed max-w-xl">
+        Formateur expert, passionné par la performance et la technologie.
+      </p>
+      <div class="w-16 h-[3px] rounded-full bg-[#c9a96e] mt-1"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       INTRO (photo + bio)
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-20 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-12 reveal">
+
+      <!-- Photo -->
+      <div class="flex-shrink-0 mx-auto md:mx-0">
+        <div class="relative">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#c9a96e] to-[#d4b87e] opacity-30 blur-sm"></div>
+          <img
+            src="/photo-hamza.jpg.JPG"
+            alt="Hamza Cherkaoui"
+            class="relative w-64 md:w-72 lg:w-80 aspect-[3/4] object-cover object-top rounded-2xl border-4 border-[#c9a96e]/40 shadow-xl"
+          />
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="flex flex-col gap-5 flex-1">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-[#1a3a35] tracking-tight">Hamza Cherkaoui</h2>
+          <p class="text-[#c9a96e] font-medium mt-1 tracking-wide">Tech-driven PMO &amp; Transformation Trainer</p>
+        </div>
+
+        <div class="w-10 h-[2px] rounded-full bg-[#c9a96e]/50"></div>
+
+        <p class="text-[#64748B] leading-relaxed">
+          Formateur spécialisé en management de projet, gouvernance PMO et transformation digitale, j'accompagne depuis plusieurs années les entreprises et les professionnels à développer leurs compétences et à améliorer leurs performances opérationnelles.
+        </p>
+        <p class="text-[#64748B] leading-relaxed">
+          Mon approche est résolument pratique et orientée résultats : chaque formation est conçue pour être applicable immédiatement sur le terrain, avec des outils concrets et des méthodologies éprouvées.
+        </p>
+        <p class="text-[#64748B] leading-relaxed">
+          Convaincu que la technologie est un levier de performance incontournable, j'intègre systématiquement les dernières innovations — notamment l'IA — dans mes programmes de formation.
+        </p>
+
+        <!-- Quick stats -->
+        <div class="flex flex-wrap gap-6 pt-2">
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold text-[#1a3a35]">4</span>
+            <span class="text-xs text-[#64748B] font-medium">Domaines d'expertise</span>
+          </div>
+          <div class="w-px bg-[#E2E8F0] self-stretch"></div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold text-[#1a3a35]">100%</span>
+            <span class="text-xs text-[#64748B] font-medium">Orienté pratique</span>
+          </div>
+          <div class="w-px bg-[#E2E8F0] self-stretch"></div>
+          <div class="flex flex-col">
+            <span class="text-2xl font-bold text-[#1a3a35]">2</span>
+            <span class="text-xs text-[#64748B] font-medium">Études de cas réels</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       EXPERTISE
+  ════════════════════════════════════════ -->
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[#1a3a35] mb-3">
+          Mes Domaines d'Expertise
+        </h2>
+        <div class="w-12 h-[2px] rounded-full bg-[#c9a96e] mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {expertise.map((e, i) => (
+          <div class={`bg-[#f8f8f6] rounded-2xl border border-[#E2E8F0] p-7 flex flex-col gap-4 card-hover hover:border-[#c9a96e] transition-colors duration-300 reveal${i === 1 ? ' reveal-delay-1' : i === 2 ? ' reveal-delay-2' : i === 3 ? ' reveal-delay-3' : ''}`}>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#c9a96e]/10 flex items-center justify-center flex-shrink-0">
+                <Fragment set:html={e.icon} />
+              </div>
+              <h3 class="text-base font-bold text-[#1a3a35]">{e.title}</h3>
+            </div>
+            <p class="text-sm text-[#64748B] leading-relaxed">{e.description}</p>
+            <div class="flex flex-wrap gap-2 mt-auto">
+              {e.tags.map(tag => (
+                <span class="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[#c9a96e]/10 text-[#c9a96e]">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       METHODOLOGY
+  ════════════════════════════════════════ -->
+  <section class="bg-[#1a3a35] py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">
+          Mon Approche Pédagogique
+        </h2>
+        <div class="w-12 h-[2px] rounded-full bg-[#c9a96e] mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {pillars.map((p, i) => (
+          <div class={`relative bg-white/5 border border-white/10 hover:border-[#c9a96e]/50 rounded-2xl p-8 flex flex-col gap-5 transition-colors duration-300 reveal${i === 1 ? ' reveal-delay-1' : i === 2 ? ' reveal-delay-2' : ''}`}>
+            <!-- Step number -->
+            <span class="absolute top-6 right-7 text-5xl font-black text-white/5 select-none leading-none">
+              {i + 1}
+            </span>
+            <div class="w-12 h-12 rounded-xl bg-[#c9a96e]/15 flex items-center justify-center">
+              <Fragment set:html={p.icon} />
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white mb-2">{p.title}</h3>
+              <p class="text-sm text-white/60 leading-relaxed">{p.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       CONSULTING
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[#1a3a35] mb-3">
+          Conseil &amp; Accompagnement
+        </h2>
+        <p class="text-[#64748B] max-w-xl mx-auto mt-3">
+          En complément de mes formations, j'interviens ponctuellement en tant que conseiller stratégique.
+        </p>
+        <div class="w-12 h-[2px] rounded-full bg-[#c9a96e] mx-auto mt-5"></div>
+      </div>
+
+      <!-- Single consulting card -->
+      <div class="max-w-2xl mx-auto bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#c9a96e] p-8 flex flex-col gap-6 card-hover transition-colors duration-300 reveal">
+
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#c9a96e]/10 flex items-center justify-center flex-shrink-0">
+            <svg width="26" height="26" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="8" height="8" rx="1"/>
+              <rect x="14" y="2" width="8" height="8" rx="1"/>
+              <rect x="2" y="14" width="8" height="8" rx="1"/>
+              <path d="M14 17h2m2 0h2M18 14v2m0 2v2"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-[#1a3a35]">CTO Advisory pour Startups</h3>
+            <p class="text-xs text-[#c9a96e] font-semibold uppercase tracking-widest mt-0.5">Conseil stratégique</p>
+          </div>
+        </div>
+
+        <p class="text-sm text-[#64748B] leading-relaxed">
+          Accompagnement des startups dans la structuration de leurs équipes tech et la mise en place de leur gouvernance digitale. De l'audit initial aux recommandations stratégiques, jusqu'au support à l'implémentation.
+        </p>
+
+        <div class="border-t border-[#E2E8F0] pt-5 flex flex-col gap-3">
+          {["Diagnostic & audit de l'existant", "Recommandations stratégiques personnalisées", "Support à l'implémentation"].map(point => (
+            <div class="flex items-start gap-3 text-sm text-[#64748B]">
+              <svg class="flex-shrink-0 mt-0.5" width="15" height="15" fill="none" stroke="#c9a96e" stroke-width="2.5" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              {point}
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       BOTTOM CTA
+  ════════════════════════════════════════ -->
+  <section class="bg-[#122926] py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 reveal">
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white leading-snug">
+        Travaillons ensemble
+      </h2>
+      <p class="text-white/60 text-lg">
+        Contactez-moi pour discuter de vos besoins en formation ou en conseil.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="https://calendly.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20"
+        >
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+          Réserver une session
+        </a>
+        <a
+          href="/formations"
+          class="inline-flex items-center justify-center border border-white/20 hover:border-[#c9a96e] hover:text-[#c9a96e] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200"
+        >
+          Voir les formations
+          <svg class="ml-2" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </Layout>
+
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
