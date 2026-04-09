@@ -337,6 +337,90 @@ import Layout from '../layouts/Layout.astro';
 
 
   <!-- ════════════════════════════════════════
+       INSIGHTS
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="text-center mb-14">
+        <p class="text-[#c9a96e] text-xs font-bold uppercase tracking-[0.25em] mb-3 reveal">Insights</p>
+        <h2 class="text-3xl font-bold tracking-tight text-[#1a3a35] mb-3 reveal reveal-delay-1">Analyses & Perspectives</h2>
+        <p class="text-[#64748B] max-w-xl mx-auto reveal reveal-delay-2">
+          Analyses et perspectives sur le management de projet et l'IA
+        </p>
+      </div>
+
+      <!-- Article card -->
+      <div class="max-w-sm mx-auto reveal reveal-delay-1">
+        <a
+          href="/insights/article-1"
+          class="group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col"
+        >
+          <!-- Image -->
+          <div class="w-full h-52 overflow-hidden bg-[#1a3a35]/5">
+            <img
+              src="/Article_1.png"
+              alt="Repenser la priorisation des portefeuilles projets"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 flex flex-col gap-3 flex-1">
+            <!-- Badge + read time -->
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
+                PMO &amp; IA
+              </span>
+              <span class="text-xs text-[#64748B] flex items-center gap-1">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                5 min
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-base font-bold text-[#1a3a35] leading-snug group-hover:text-[#c9a96e] transition-colors duration-200">
+              Repenser la priorisation des portefeuilles projets
+            </h3>
+
+            <!-- Excerpt -->
+            <p class="text-sm text-[#64748B] leading-relaxed flex-1">
+              La priorisation du portefeuille projets a toujours été l'une des responsabilités les plus critiques du PMO. L'IA change fondamentalement la donne.
+            </p>
+
+            <!-- CTA -->
+            <div class="pt-3 border-t border-[#E2E8F0] mt-auto">
+              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] group-hover:gap-2.5 transition-all duration-200">
+                Lire l'article
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- See all CTA -->
+      <div class="text-center mt-12 reveal">
+        <a
+          href="/insights"
+          class="inline-flex items-center gap-2 border border-[#1a3a35] hover:bg-[#1a3a35] hover:text-white text-[#1a3a35] font-semibold px-8 py-3.5 rounded-xl transition-all duration-200"
+        >
+          Voir tous les articles
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
        BOTTOM CTA
   ════════════════════════════════════════ -->
   <section class="bg-[#122926] py-24 px-6">

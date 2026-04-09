@@ -1,0 +1,421 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Repenser la priorisation des portefeuilles projets — Hamza Cherkaoui"
+  description="La priorisation du portefeuille projets a toujours été l'une des responsabilités les plus critiques du PMO. L'IA change fondamentalement la donne."
+>
+
+  <!-- ════════════════════════════════════════
+       HERO IMAGE
+  ════════════════════════════════════════ -->
+  <div class="w-full bg-[#1a3a35] relative overflow-hidden" style="max-height:400px;">
+    <img
+      src="/Article_1.png"
+      alt="Repenser la priorisation des portefeuilles projets"
+      class="w-full object-cover object-center"
+      style="max-height:400px;"
+    />
+    <!-- Dark overlay for readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#1a3a35]/70 via-transparent to-transparent"></div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       ARTICLE CONTAINER
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Back + Toggle row -->
+      <div class="flex items-center justify-between mb-10 flex-wrap gap-4">
+        <a
+          href="/insights"
+          class="inline-flex items-center gap-2 text-sm text-[#64748B] hover:text-[#1a3a35] transition-colors font-medium"
+        >
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          Retour aux Insights
+        </a>
+
+        <!-- FR / EN Toggle -->
+        <div class="flex items-center gap-1 bg-white border border-[#E2E8F0] rounded-xl p-1 shadow-sm">
+          <button
+            id="btn-fr"
+            onclick="setLang('fr')"
+            class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 bg-[#1a3a35] text-white"
+          >
+            FR
+          </button>
+          <button
+            id="btn-en"
+            onclick="setLang('en')"
+            class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 text-[#64748B] hover:text-[#1a3a35]"
+          >
+            EN
+          </button>
+        </div>
+      </div>
+
+      <!-- Meta -->
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
+          PMO &amp; IA
+        </span>
+        <span class="text-sm text-[#64748B] flex items-center gap-1.5">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          5 min
+        </span>
+      </div>
+
+
+      <!-- ── FRENCH VERSION ── -->
+      <article id="content-fr" class="prose-article">
+
+        <h1 class="text-3xl md:text-4xl font-bold text-[#1a3a35] leading-tight mb-10">
+          Repenser la priorisation des portefeuilles projets : du défi structurel du PMO à l'opportunité IA
+        </h1>
+
+        <div class="article-section">
+          <h2>Introduction</h2>
+          <p>La priorisation du portefeuille projets a toujours été l'une des responsabilités les plus critiques — et les plus complexes — du PMO.</p>
+          <p>En théorie, les organisations cherchent à sélectionner les initiatives créant le plus de valeur stratégique.<br/>En pratique, la priorisation devient souvent un compromis entre intérêts divergents, ressources limitées et informations incomplètes.</p>
+          <p>Avec la multiplication des projets de transformation, cette complexité ne cesse d'augmenter.</p>
+          <p class="callout">La question n'est plus de savoir si la priorisation est difficile —<br/>mais si nos approches actuelles sont encore adaptées.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Les limites structurelles des modèles traditionnels</h2>
+          <p>La plupart des organisations s'appuient sur :</p>
+          <ul>
+            <li>des comités de gouvernance</li>
+            <li>des matrices de priorisation</li>
+            <li>des modèles de scoring</li>
+          </ul>
+          <p>Ces outils apportent un cadre, mais présentent plusieurs limites :</p>
+          <ul>
+            <li>modèles statiques ne reflétant pas la réalité dynamique</li>
+            <li>prise en compte limitée des dépendances entre projets</li>
+            <li>critères simplifiés ne capturant pas la vraie valeur</li>
+            <li>biais décisionnels liés aux dynamiques organisationnelles</li>
+            <li>données fragmentées entre différents systèmes</li>
+          </ul>
+          <p>Résultat : une priorisation souvent peu robuste et peu cohérente.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Une complexité croissante difficile à maîtriser</h2>
+          <p>Les organisations évoluent aujourd'hui dans un environnement marqué par :</p>
+          <ul>
+            <li>des interdépendances fortes entre initiatives</li>
+            <li>des priorités changeantes</li>
+            <li>des contraintes de capacité</li>
+            <li>une incertitude élevée</li>
+          </ul>
+          <p>Dans ce contexte, les approches traditionnelles montrent leurs limites.</p>
+          <p class="callout">La décision doit devenir plus dynamique, plus informée et plus adaptative.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Comment l'IA transforme la priorisation</h2>
+          <p>L'intelligence artificielle introduit une rupture majeure.</p>
+          <p>Elle permet notamment de :</p>
+          <ul>
+            <li>analyser des volumes importants de données multi-dimensionnelles</li>
+            <li>simuler plusieurs scénarios de priorisation</li>
+            <li>ajuster en temps réel les décisions</li>
+            <li>identifier des risques ou opportunités invisibles</li>
+            <li>objectiver les arbitrages d'investissement</li>
+          </ul>
+          <p>La priorisation devient ainsi un processus continu et intelligent.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Le nouveau rôle du PMO</h2>
+          <p>Avec l'IA, le PMO évolue profondément.</p>
+          <p>Il ne se limite plus à la coordination et au reporting.</p>
+          <p>Il devient un acteur clé de la décision stratégique, capable de :</p>
+          <ul>
+            <li>structurer les mécanismes de décision</li>
+            <li>garantir la qualité des données</li>
+            <li>interpréter les analyses issues de l'IA</li>
+            <li>accompagner les instances de gouvernance</li>
+            <li>aligner stratégie et exécution</li>
+          </ul>
+          <p class="callout">Le PMO devient un architecte de la décision.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Impacts pour les organisations</h2>
+          <p>Les bénéfices attendus sont significatifs :</p>
+          <ul>
+            <li>meilleure allocation des ressources</li>
+            <li>alignement stratégique renforcé</li>
+            <li>décisions plus rapides et plus fiables</li>
+            <li>amélioration de la performance globale du portefeuille</li>
+            <li>plus grande agilité</li>
+          </ul>
+          <p>Mais cette transformation est avant tout organisationnelle.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>Le défi de la priorisation a toujours été structurel.</p>
+          <p>L'IA ne le supprime pas —<br/>elle permet de mieux y répondre.</p>
+          <p>La vraie question devient :</p>
+          <p class="callout">Sommes-nous capables de prioriser de manière dynamique, pilotée par la donnée et alignée avec la stratégie ?</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">À propos</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              J'accompagne les organisations dans la transformation de leur gouvernance PMO et l'intégration de l'IA dans la prise de décision stratégique.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Me contacter
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ── ENGLISH VERSION ── -->
+      <article id="content-en" class="prose-article hidden">
+
+        <h1 class="text-3xl md:text-4xl font-bold text-[#1a3a35] leading-tight mb-10">
+          Reframing Project Portfolio Prioritization: From a Structural PMO Challenge to an AI-Driven Opportunity
+        </h1>
+
+        <div class="article-section">
+          <h2>Introduction</h2>
+          <p>Project portfolio prioritization has always been one of the most critical — and most challenging — responsibilities of the PMO.</p>
+          <p>In theory, organizations aim to select and prioritize initiatives that maximize strategic value.<br/>In practice, however, prioritization often becomes a compromise between competing interests, limited resources, and incomplete information.</p>
+          <p>As organizations scale and transformation initiatives multiply, this challenge becomes even more complex.</p>
+          <p class="callout">The question is no longer whether prioritization is difficult —<br/>it is whether our current approaches are still adapted to today's level of complexity.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>The Structural Limits of Traditional Prioritization Models</h2>
+          <p>Most organizations rely on a combination of governance committees, scoring models, and prioritization matrices.</p>
+          <p>While these tools provide a structured framework, they present several limitations:</p>
+          <ul>
+            <li>Static evaluation models that fail to capture real-time dynamics</li>
+            <li>Limited integration of dependencies between projects and programs</li>
+            <li>Oversimplified scoring criteria that do not reflect actual business impact</li>
+            <li>Decision biases influenced by organizational politics or seniority</li>
+            <li>Fragmented data across multiple systems and stakeholders</li>
+          </ul>
+          <p>As a result, prioritization often lacks robustness and consistency.</p>
+          <p>Projects are launched without full visibility.<br/>Resources are spread too thin.<br/>Strategic alignment weakens over time.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>A Growing Complexity That Traditional Approaches Cannot Handle</h2>
+          <p>Today's organizations operate in an environment characterized by:</p>
+          <ul>
+            <li>Increasing interdependencies between initiatives</li>
+            <li>Rapid changes in business priorities</li>
+            <li>Resource constraints and capacity volatility</li>
+            <li>High levels of uncertainty and risk</li>
+          </ul>
+          <p>In such a context, periodic governance cycles and static prioritization frameworks are no longer sufficient.</p>
+          <p class="callout">Decision-making needs to become more dynamic, data-driven, and adaptive.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>How AI Is Reshaping Portfolio Prioritization</h2>
+          <p>Artificial Intelligence introduces a fundamental shift in how organizations can approach prioritization.</p>
+          <p>Rather than replacing human decision-making, AI enhances it by enabling:</p>
+          <ul>
+            <li>Multi-dimensional data analysis across financial, operational, and strategic indicators</li>
+            <li>Scenario simulation, allowing decision-makers to test multiple prioritization strategies</li>
+            <li>Real-time portfolio adjustments based on evolving constraints and performance</li>
+            <li>Identification of hidden patterns and risks that are difficult to detect manually</li>
+            <li>Objective support for investment decisions, reducing bias</li>
+          </ul>
+          <p>This transforms prioritization from a static exercise into a continuous, intelligent process.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>From Coordination to Strategic Decision Architecture: The New Role of the PMO</h2>
+          <p>As AI augments decision-making capabilities, the role of the PMO evolves significantly.</p>
+          <p>The PMO is no longer limited to coordination, reporting, and governance facilitation.</p>
+          <p>It becomes a strategic enabler, responsible for:</p>
+          <ul>
+            <li>Structuring decision frameworks</li>
+            <li>Ensuring data quality and consistency</li>
+            <li>Interpreting AI-generated insights</li>
+            <li>Supporting executive decision-making</li>
+            <li>Driving alignment between strategy and execution</li>
+          </ul>
+          <p class="callout">In this new model, the PMO acts as an architect of decision-making, not just a producer of information.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Key Implications for Organizations</h2>
+          <p>Organizations that successfully integrate AI into portfolio prioritization can expect:</p>
+          <ul>
+            <li>Improved allocation of resources</li>
+            <li>Stronger alignment with strategic objectives</li>
+            <li>Faster and more informed decision-making</li>
+            <li>Increased portfolio performance and value delivery</li>
+            <li>Greater adaptability in changing environments</li>
+          </ul>
+          <p>However, this transformation requires more than technology.</p>
+          <p>It requires rethinking governance models, decision processes, and organizational roles.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>The challenge of portfolio prioritization has always been structural.</p>
+          <p>AI does not eliminate this challenge —<br/>but it provides the means to address it more effectively.</p>
+          <p>The real question for organizations is no longer:</p>
+          <p><em>Which projects should we prioritize?</em></p>
+          <p>But rather:</p>
+          <p class="callout">Are we equipped to prioritize in a dynamic, data-driven, and strategically aligned way?</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">About</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              I support organizations in redefining PMO governance and integrating AI into strategic decision-making.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Get in touch
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+</Layout>
+
+
+<style>
+  /* ── Article typography ── */
+  .prose-article { color: #334155; }
+
+  .article-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .prose-article h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a3a35;
+    margin-bottom: 0.875rem;
+    padding-left: 0.875rem;
+    border-left: 3px solid #c9a96e;
+  }
+
+  .prose-article p {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    margin-bottom: 0.875rem;
+    color: #475569;
+  }
+
+  .prose-article ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .prose-article ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .prose-article ul li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c9a96e;
+    flex-shrink: 0;
+    margin-top: 0.525rem;
+  }
+
+  .prose-article .callout {
+    background: linear-gradient(135deg, #1a3a35/5, transparent);
+    border-left: 3px solid #c9a96e;
+    background-color: #1a3a35;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+
+  .prose-article em {
+    color: #1a3a35;
+    font-style: italic;
+  }
+
+  .hidden { display: none !important; }
+</style>
+
+
+<script>
+  function setLang(lang: string) {
+    const fr = document.getElementById('content-fr');
+    const en = document.getElementById('content-en');
+    const btnFr = document.getElementById('btn-fr');
+    const btnEn = document.getElementById('btn-en');
+
+    if (!fr || !en || !btnFr || !btnEn) return;
+
+    if (lang === 'fr') {
+      fr.classList.remove('hidden');
+      en.classList.add('hidden');
+      btnFr.classList.add('bg-[#1a3a35]', 'text-white');
+      btnFr.classList.remove('text-[#64748B]');
+      btnEn.classList.remove('bg-[#1a3a35]', 'text-white');
+      btnEn.classList.add('text-[#64748B]');
+    } else {
+      en.classList.remove('hidden');
+      fr.classList.add('hidden');
+      btnEn.classList.add('bg-[#1a3a35]', 'text-white');
+      btnEn.classList.remove('text-[#64748B]');
+      btnFr.classList.remove('bg-[#1a3a35]', 'text-white');
+      btnFr.classList.add('text-[#64748B]');
+    }
+  }
+
+  // Expose globally for onclick handlers
+  (window as any).setLang = setLang;
+</script>

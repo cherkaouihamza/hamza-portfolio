@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const articles = [
+  {
+    slug: "article-1",
+    image: "/Article_1.png",
+    badge: "PMO & IA",
+    title: "Repenser la priorisation des portefeuilles projets",
+    excerpt: "La priorisation du portefeuille projets a toujours été l'une des responsabilités les plus critiques du PMO. L'IA change fondamentalement la donne.",
+    readTime: "5 min",
+  },
+];
+---
+
+<Layout
+  title="Insights — Hamza Cherkaoui"
+  description="Analyses, tendances et bonnes pratiques en management de projet et IA."
+>
+
+  <!-- ════════════════════════════════════════
+       PAGE HERO
+  ════════════════════════════════════════ -->
+  <section class="bg-[#1a3a35] text-white pt-16 pb-20 px-6">
+    <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-5">
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+        Insights
+      </h1>
+      <p class="text-white/70 text-lg leading-relaxed max-w-xl">
+        Analyses, tendances et bonnes pratiques en management de projet et IA
+      </p>
+      <!-- Gold divider -->
+      <div class="w-16 h-[3px] rounded-full bg-[#c9a96e] mt-1"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       ARTICLES GRID
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-20 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {articles.map((article, i) => (
+        <a
+          href={`/insights/${article.slug}`}
+          class={`group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col reveal${i === 1 ? ' reveal-delay-1' : i === 2 ? ' reveal-delay-2' : ''}`}
+        >
+          <!-- Image -->
+          <div class="w-full h-52 overflow-hidden bg-[#1a3a35]/5">
+            <img
+              src={article.image}
+              alt={article.title}
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 flex flex-col gap-3 flex-1">
+            <!-- Badge + read time -->
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
+                {article.badge}
+              </span>
+              <span class="text-xs text-[#64748B] flex items-center gap-1">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                {article.readTime}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h2 class="text-base font-bold text-[#1a3a35] leading-snug group-hover:text-[#c9a96e] transition-colors duration-200">
+              {article.title}
+            </h2>
+
+            <!-- Excerpt -->
+            <p class="text-sm text-[#64748B] leading-relaxed flex-1">
+              {article.excerpt}
+            </p>
+
+            <!-- CTA -->
+            <div class="pt-3 border-t border-[#E2E8F0] mt-auto">
+              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] group-hover:gap-2.5 transition-all duration-200">
+                Lire l'article
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+
+    </div>
+  </section>
+
+</Layout>
+
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
