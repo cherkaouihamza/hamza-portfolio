@@ -1,0 +1,394 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="L'IA au service du quotidien professionnel — Hamza Cherkaoui"
+  description="L'IA transforme profondément la façon dont nous travaillons. Communication, rapports, automatisation — découvrez comment l'intégrer concrètement dans votre quotidien."
+>
+
+  <!-- ════════════════════════════════════════
+       HERO IMAGE
+  ════════════════════════════════════════ -->
+  <div class="w-full relative overflow-hidden h-[220px] md:h-[320px]">
+    <!-- Background image -->
+    <img
+      src="/ai-everyday-professional.png"
+      alt="L'IA au service du quotidien professionnel"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <!-- Dark gradient overlay -->
+    <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(18,41,38,0.3) 0%, rgba(18,41,38,0.85) 100%);"></div>
+
+    <!-- FR/EN Toggle — top right -->
+    <div class="absolute top-4 right-4 flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-1">
+      <button
+        id="btn-fr"
+        onclick="setLang('fr')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 bg-white text-[#1a3a35]"
+      >
+        FR
+      </button>
+      <button
+        id="btn-en"
+        onclick="setLang('en')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 text-white/80 hover:text-white"
+      >
+        EN
+      </button>
+    </div>
+
+    <!-- Content overlay — bottom left -->
+    <div class="absolute bottom-0 left-0 right-0 px-6 pb-8 pt-4 max-w-5xl mx-auto">
+      <!-- Badge + read time -->
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/20 border border-[#c9a96e]/30">
+          Intelligence Artificielle
+        </span>
+        <span class="text-xs text-white/70 flex items-center gap-1.5">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          6 min
+        </span>
+      </div>
+      <!-- FR title -->
+      <h1 id="hero-title-fr" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl">
+        L'IA au service du quotidien professionnel : de la communication à l'automatisation
+      </h1>
+      <!-- EN title -->
+      <h1 id="hero-title-en" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl hidden">
+        AI for Everyday Professional Use: From Communication to Automation
+      </h1>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       ARTICLE CONTAINER
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Back link -->
+      <div class="mb-10">
+        <a
+          href="/insights"
+          class="inline-flex items-center gap-2 text-sm text-[#64748B] hover:text-[#1a3a35] transition-colors font-medium"
+        >
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          Retour aux Insights
+        </a>
+      </div>
+
+
+      <!-- ── FRENCH VERSION ── -->
+      <article id="content-fr" class="prose-article">
+
+        <div class="article-section">
+          <h2>Introduction</h2>
+          <p>L'intelligence artificielle n'est plus l'apanage des data scientists ou des équipes techniques. Elle est aujourd'hui accessible à tous les professionnels et transforme profondément la façon dont nous travaillons au quotidien.</p>
+          <p class="callout">La question n'est plus de savoir si l'IA va changer votre métier. Elle le change déjà.<br/>La vraie question est : êtes-vous équipé pour en tirer parti ?</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Communication professionnelle : écrire mieux, plus vite</h2>
+          <p>La communication représente une part considérable du temps de travail. L'IA permet aujourd'hui de :</p>
+          <ul>
+            <li>rédiger ou reformuler des emails professionnels en quelques secondes</li>
+            <li>générer des comptes-rendus de réunion à partir de notes brutes</li>
+            <li>adapter le ton d'un message selon le destinataire</li>
+            <li>traduire et localiser des communications en plusieurs langues instantanément</li>
+          </ul>
+          <p>Les outils comme ChatGPT, Claude ou Gemini sont devenus de véritables assistants de communication.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Génération de contenu : rapports, synthèses et publications</h2>
+          <p>La production de contenu est l'un des domaines où l'IA apporte le gain de productivité le plus immédiat. Concrètement, l'IA peut :</p>
+          <ul>
+            <li>générer des rapports structurés à partir de données brutes</li>
+            <li>produire des synthèses exécutives en quelques instants</li>
+            <li>rédiger des articles et posts LinkedIn</li>
+            <li>créer des présentations PowerPoint à partir d'un simple brief</li>
+            <li>résumer des documents longs</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>Automatisation des tâches répétitives</h2>
+          <p>Au-delà de la génération de contenu, l'IA permet d'automatiser des workflows entiers :</p>
+          <ul>
+            <li>tri et classification automatique des emails</li>
+            <li>relances automatisées personnalisées</li>
+            <li>génération de rapports récurrents</li>
+            <li>extraction et structuration de données</li>
+            <li>création de tableaux de bord en temps réel</li>
+          </ul>
+          <p>Des outils comme Make, Zapier ou Microsoft Power Automate permettent de construire des flux de travail intelligents sans compétences techniques avancées.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Les outils incontournables en 2025</h2>
+          <ul>
+            <li><strong>Communication &amp; rédaction :</strong> ChatGPT, Claude, Gemini, Mistral</li>
+            <li><strong>Présentations &amp; visuels :</strong> Gamma, Beautiful.ai, Canva AI</li>
+            <li><strong>Rapports &amp; documents :</strong> Notion AI, Microsoft Copilot, Google Gemini for Workspace</li>
+            <li><strong>Automatisation :</strong> Make, Zapier, Microsoft Power Automate, n8n</li>
+            <li><strong>Réunions &amp; transcription :</strong> Otter.ai, Fireflies, Tactiq</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>Comment démarrer : 3 étapes concrètes</h2>
+          <ul>
+            <li><strong>Étape 1 — Identifier vos tâches chronophages :</strong> listez les 5 tâches qui vous prennent le plus de temps chaque semaine.</li>
+            <li><strong>Étape 2 — Tester un outil pendant 2 semaines :</strong> choisissez un seul outil et utilisez-le systématiquement pour une tâche précise.</li>
+            <li><strong>Étape 3 — Élargir progressivement :</strong> une fois à l'aise, explorez les outils d'automatisation.</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>L'IA ne remplace pas le professionnel. Elle amplifie ses capacités. Ceux qui l'adoptent aujourd'hui travaillent mieux, plus vite, et se concentrent sur ce qui crée vraiment de la valeur.</p>
+          <p class="callout">La transformation est en cours. La question est : à quel rythme souhaitez-vous l'adopter ?</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">À propos</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              Je forme les équipes à l'intégration concrète de l'IA dans leurs pratiques professionnelles — avec des ateliers pratiques sur les outils les plus impactants.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Me contacter
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ── ENGLISH VERSION ── -->
+      <article id="content-en" class="prose-article hidden">
+
+        <div class="article-section">
+          <h2>Introduction</h2>
+          <p>Artificial intelligence is no longer the exclusive domain of data scientists or technical teams. It is now accessible to all professionals and is profoundly transforming the way we work every day.</p>
+          <p class="callout">The question is no longer whether AI will change your job. It already is.<br/>The real question is: are you equipped to make the most of it?</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Professional Communication: Write Better, Faster</h2>
+          <p>Communication takes up a significant share of working time. AI now enables professionals to:</p>
+          <ul>
+            <li>draft or rewrite professional emails in seconds</li>
+            <li>generate meeting summaries from raw notes</li>
+            <li>adapt the tone of a message depending on the audience</li>
+            <li>translate and localize communications into multiple languages instantly</li>
+          </ul>
+          <p>Tools like ChatGPT, Claude, or Gemini have become true communication assistants.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Content Generation: Reports, Summaries, and Publications</h2>
+          <p>Content production is one of the areas where AI delivers the most immediate productivity gains. In practice, AI can:</p>
+          <ul>
+            <li>generate structured reports from raw data</li>
+            <li>produce executive summaries in seconds</li>
+            <li>write articles and LinkedIn posts</li>
+            <li>create PowerPoint presentations from a simple brief</li>
+            <li>summarize long documents</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>Automating Repetitive Tasks</h2>
+          <p>Beyond content generation, AI enables the automation of entire workflows:</p>
+          <ul>
+            <li>automatic email sorting and classification</li>
+            <li>personalized automated follow-ups</li>
+            <li>recurring report generation</li>
+            <li>data extraction and structuring</li>
+            <li>real-time updated dashboards</li>
+          </ul>
+          <p>Tools like Make, Zapier, or Microsoft Power Automate allow professionals to build intelligent workflows without advanced technical skills.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Essential Tools in 2025</h2>
+          <ul>
+            <li><strong>Communication &amp; writing:</strong> ChatGPT, Claude, Gemini, Mistral</li>
+            <li><strong>Presentations &amp; visuals:</strong> Gamma, Beautiful.ai, Canva AI</li>
+            <li><strong>Reports &amp; documents:</strong> Notion AI, Microsoft Copilot, Google Gemini for Workspace</li>
+            <li><strong>Automation:</strong> Make, Zapier, Microsoft Power Automate, n8n</li>
+            <li><strong>Meetings &amp; transcription:</strong> Otter.ai, Fireflies, Tactiq</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>How to Get Started: 3 Concrete Steps</h2>
+          <ul>
+            <li><strong>Step 1 — Identify your most time-consuming tasks:</strong> list the 5 tasks that take the most time each week.</li>
+            <li><strong>Step 2 — Test one tool for 2 weeks:</strong> choose a single tool and use it consistently for one specific task.</li>
+            <li><strong>Step 3 — Expand progressively:</strong> once comfortable, explore automation tools.</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>AI does not replace the professional. It amplifies their capabilities. Those who adopt it today work better, faster, and focus on what truly creates value.</p>
+          <p class="callout">The transformation is underway. The question is: at what pace do you choose to embrace it?</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">About</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              I train teams on the practical integration of AI into their professional practices — through hands-on workshops on the most impactful tools.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Get in touch
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+</Layout>
+
+
+<style>
+  /* ── Article typography ── */
+  .prose-article { color: #334155; }
+
+  .article-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .prose-article h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a3a35;
+    margin-bottom: 0.875rem;
+    padding-left: 0.875rem;
+    border-left: 3px solid #c9a96e;
+  }
+
+  .prose-article p {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    margin-bottom: 0.875rem;
+    color: #475569;
+  }
+
+  .prose-article ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .prose-article ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .prose-article ul li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c9a96e;
+    flex-shrink: 0;
+    margin-top: 0.525rem;
+  }
+
+  .prose-article .callout {
+    background: linear-gradient(135deg, #1a3a35/5, transparent);
+    border-left: 3px solid #c9a96e;
+    background-color: #1a3a35;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+
+  .prose-article em {
+    color: #1a3a35;
+    font-style: italic;
+  }
+
+  .prose-article strong {
+    color: #1a3a35;
+    font-weight: 600;
+  }
+
+  .hidden { display: none !important; }
+</style>
+
+
+<script>
+  function setLang(lang: string) {
+    const fr = document.getElementById('content-fr');
+    const en = document.getElementById('content-en');
+    const btnFr = document.getElementById('btn-fr');
+    const btnEn = document.getElementById('btn-en');
+    const heroFr = document.getElementById('hero-title-fr');
+    const heroEn = document.getElementById('hero-title-en');
+
+    if (!fr || !en || !btnFr || !btnEn || !heroFr || !heroEn) return;
+
+    if (lang === 'fr') {
+      fr.classList.remove('hidden');
+      en.classList.add('hidden');
+      heroFr.classList.remove('hidden');
+      heroEn.classList.add('hidden');
+      btnFr.classList.add('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.remove('text-white/80');
+      btnEn.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.add('text-white/80');
+    } else {
+      en.classList.remove('hidden');
+      fr.classList.add('hidden');
+      heroEn.classList.remove('hidden');
+      heroFr.classList.add('hidden');
+      btnEn.classList.add('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.remove('text-white/80');
+      btnFr.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.add('text-white/80');
+    }
+  }
+
+  // Expose globally for onclick handlers
+  (window as any).setLang = setLang;
+</script>

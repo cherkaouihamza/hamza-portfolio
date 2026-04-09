@@ -350,24 +350,22 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
 
-      <!-- Article card -->
-      <div class="max-w-sm mx-auto reveal reveal-delay-1">
+      <!-- Article cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+
+        <!-- Card 1 -->
         <a
           href="/insights/pmo-portfolio-prioritization-ai"
-          class="group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col"
+          class="group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col reveal reveal-delay-1"
         >
-          <!-- Image -->
-          <div class="w-full h-52 overflow-hidden bg-[#1a3a35]/5">
+          <div class="w-full h-48 overflow-hidden bg-[#1a3a35]/5">
             <img
               src="/pmo-portfolio-prioritization-ai.png"
               alt="Repenser la priorisation des portefeuilles projets"
               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
           </div>
-
-          <!-- Content -->
           <div class="p-6 flex flex-col gap-3 flex-1">
-            <!-- Badge + read time -->
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
                 PMO &amp; IA
@@ -379,18 +377,12 @@ import Layout from '../layouts/Layout.astro';
                 5 min
               </span>
             </div>
-
-            <!-- Title -->
             <h3 class="text-base font-bold text-[#1a3a35] leading-snug group-hover:text-[#c9a96e] transition-colors duration-200">
               Repenser la priorisation des portefeuilles projets
             </h3>
-
-            <!-- Excerpt -->
             <p class="text-sm text-[#64748B] leading-relaxed flex-1">
               La priorisation du portefeuille projets a toujours été l'une des responsabilités les plus critiques du PMO. L'IA change fondamentalement la donne.
             </p>
-
-            <!-- CTA -->
             <div class="pt-3 border-t border-[#E2E8F0] mt-auto">
               <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] group-hover:gap-2.5 transition-all duration-200">
                 Lire l'article
@@ -401,6 +393,48 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
         </a>
+
+        <!-- Card 2 -->
+        <a
+          href="/insights/ai-everyday-professional"
+          class="group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col reveal reveal-delay-2"
+        >
+          <div class="w-full h-48 overflow-hidden bg-[#1a3a35]/5">
+            <img
+              src="/ai-everyday-professional.png"
+              alt="L'IA au service du quotidien professionnel"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6 flex flex-col gap-3 flex-1">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
+                Intelligence Artificielle
+              </span>
+              <span class="text-xs text-[#64748B] flex items-center gap-1">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+                6 min
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-[#1a3a35] leading-snug group-hover:text-[#c9a96e] transition-colors duration-200">
+              L'IA au service du quotidien professionnel
+            </h3>
+            <p class="text-sm text-[#64748B] leading-relaxed flex-1">
+              L'IA transforme profondément la façon dont nous travaillons. Communication, rapports, automatisation — découvrez comment l'intégrer concrètement dans votre quotidien.
+            </p>
+            <div class="pt-3 border-t border-[#E2E8F0] mt-auto">
+              <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] group-hover:gap-2.5 transition-all duration-200">
+                Lire l'article
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
       </div>
 
       <!-- See all CTA -->
