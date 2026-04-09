@@ -4,33 +4,74 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  keywords?: string;
+  image?: string;
   lang?: string;
+  canonicalUrl?: string;
 }
 
 const {
   title = "Hamza Cherkaoui — Formateur Expert en Management de Projet, PMO & IA",
   description = "J'accompagne les entreprises et les professionnels à monter en compétences sur la gestion de projet, la gouvernance PMO et l'intégration de l'IA — avec des formations 100% pratiques et orientées résultats.",
+  keywords = "formateur management de projet, formation PMO, formation IA Maroc, chef de projet, gouvernance PMO",
+  image = "https://cherkaouihamza.ma/photo-hamza.jpg",
   lang = "fr",
+  canonicalUrl,
 } = Astro.props;
 
 const isEn = lang === 'en';
 const prefix = isEn ? '/en' : '';
 
-// Language switcher URLs
+// Language switcher URLs (used in navbar + hreflang)
 const pathname = Astro.url.pathname;
 const frUrl = isEn ? (pathname.replace(/^\/en/, '') || '/') : pathname;
 const enUrl = isEn ? pathname : ('/en' + pathname);
+
+const domain = 'https://cherkaouihamza.ma';
+const canonical = canonicalUrl ?? (domain + pathname);
+const ogLocale = isEn ? 'en_US' : 'fr_FR';
+const ogImage = "https://cherkaouihamza.ma/photo-hamza.jpg";
 ---
 <!doctype html>
-<html lang="fr">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Primary Meta -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Hamza Cherkaoui" />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={ogLocale} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fr" href={`${domain}${frUrl}`} />
+    <link rel="alternate" hreflang="en" href={`${domain}${enUrl}`} />
+    <link rel="alternate" hreflang="x-default" href={`${domain}${frUrl}`} />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
+
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <title>{title}</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
