@@ -1,30 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 
 const articles = [
   {
     slug: "pmo-portfolio-prioritization-ai",
     image: "/pmo-portfolio-prioritization-ai.png",
-    badge: "PMO & IA",
-    title: "Repenser la priorisation des portefeuilles projets",
-    excerpt: "La priorisation du portefeuille projets a toujours été l'une des responsabilités les plus critiques du PMO. L'IA change fondamentalement la donne.",
+    badge: "PMO & AI",
+    title: "Reframing Project Portfolio Prioritization",
+    excerpt: "Portfolio prioritization has always been one of the most critical PMO responsibilities. AI fundamentally changes the game.",
     readTime: "5 min",
   },
   {
     slug: "ai-everyday-professional",
     image: "/ai-everyday-professional.png",
-    badge: "Intelligence Artificielle",
-    title: "L'IA au service du quotidien professionnel",
-    excerpt: "L'IA transforme profondément la façon dont nous travaillons. Communication, rapports, automatisation — découvrez comment l'intégrer concrètement dans votre quotidien.",
+    badge: "Artificial Intelligence",
+    title: "AI for Everyday Professional Use",
+    excerpt: "AI is profoundly transforming the way we work. Communication, reports, automation — discover how to integrate it concretely into your daily routine.",
     readTime: "6 min",
   },
 ];
 ---
 
 <Layout
-  lang="fr"
+  lang="en"
   title="Insights — Hamza Cherkaoui"
-  description="Analyses, tendances et bonnes pratiques en management de projet et IA."
+  description="Analysis, trends and best practices in project management and AI."
 >
 
   <!-- ════════════════════════════════════════
@@ -36,9 +36,8 @@ const articles = [
         Insights
       </h1>
       <p class="text-white/70 text-lg leading-relaxed max-w-xl">
-        Analyses, tendances et bonnes pratiques en management de projet et IA
+        Analysis, trends and best practices in project management and AI
       </p>
-      <!-- Gold divider -->
       <div class="w-16 h-[3px] rounded-full bg-[#c9a96e] mt-1"></div>
     </div>
   </section>
@@ -55,7 +54,6 @@ const articles = [
           href={`/insights/${article.slug}`}
           class={`group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col reveal${i === 1 ? ' reveal-delay-1' : i === 2 ? ' reveal-delay-2' : ''}`}
         >
-          <!-- Image -->
           <div class="w-full h-52 overflow-hidden bg-[#1a3a35]/5">
             <img
               src={article.image}
@@ -63,10 +61,7 @@ const articles = [
               class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
           </div>
-
-          <!-- Content -->
           <div class="p-6 flex flex-col gap-3 flex-1">
-            <!-- Badge + read time -->
             <div class="flex items-center justify-between">
               <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
                 {article.badge}
@@ -78,21 +73,15 @@ const articles = [
                 {article.readTime}
               </span>
             </div>
-
-            <!-- Title -->
             <h2 class="text-base font-bold text-[#1a3a35] leading-snug group-hover:text-[#c9a96e] transition-colors duration-200">
               {article.title}
             </h2>
-
-            <!-- Excerpt -->
             <p class="text-sm text-[#64748B] leading-relaxed flex-1">
               {article.excerpt}
             </p>
-
-            <!-- CTA -->
             <div class="pt-3 border-t border-[#E2E8F0] mt-auto">
               <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] group-hover:gap-2.5 transition-all duration-200">
-                Lire l'article
+                Read article
                 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>

@@ -4,12 +4,22 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  lang?: string;
 }
 
 const {
   title = "Hamza Cherkaoui — Formateur Expert en Management de Projet, PMO & IA",
-  description = "J'accompagne les entreprises et les professionnels à monter en compétences sur la gestion de projet, la gouvernance PMO et l'intégration de l'IA — avec des formations 100% pratiques et orientées résultats."
+  description = "J'accompagne les entreprises et les professionnels à monter en compétences sur la gestion de projet, la gouvernance PMO et l'intégration de l'IA — avec des formations 100% pratiques et orientées résultats.",
+  lang = "fr",
 } = Astro.props;
+
+const isEn = lang === 'en';
+const prefix = isEn ? '/en' : '';
+
+// Language switcher URLs
+const pathname = Astro.url.pathname;
+const frUrl = isEn ? (pathname.replace(/^\/en/, '') || '/') : pathname;
+const enUrl = isEn ? pathname : ('/en' + pathname);
 ---
 <!doctype html>
 <html lang="fr">
@@ -38,13 +48,24 @@ const {
           <img src="/logo-hch.png" alt="Hamza Cherkaoui" class="h-[50px] object-contain" />
         </a>
         <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <li><a href="/" class="nav-link text-white/80">Home</a></li>
-          <li><a href="/formations" class="nav-link text-white/80">Formations</a></li>
-          <li><a href="/case-studies" class="nav-link text-white/80">Case Studies</a></li>
-          <li><a href="/about" class="nav-link text-white/80">About</a></li>
-          <li><a href="/insights" class="nav-link text-white/80">Insights</a></li>
+          <li><a href={`${prefix}/`} class="nav-link text-white/80">{isEn ? 'Home' : 'Accueil'}</a></li>
+          <li><a href={`${prefix}/formations`} class="nav-link text-white/80">{isEn ? 'Training' : 'Formations'}</a></li>
+          <li><a href={`${prefix}/case-studies`} class="nav-link text-white/80">Case Studies</a></li>
+          <li><a href={`${prefix}/about`} class="nav-link text-white/80">About</a></li>
+          <li><a href={`${prefix}/insights`} class="nav-link text-white/80">Insights</a></li>
+          <!-- Language switcher -->
+          <li class="flex items-center gap-1 border border-white/20 rounded-lg p-0.5">
+            <a
+              href={frUrl}
+              class={`px-2.5 py-1 rounded-md text-xs font-bold transition-all duration-200 ${!isEn ? 'bg-[#c9a96e] text-[#122926]' : 'text-white/50 hover:text-white'}`}
+            >FR</a>
+            <a
+              href={enUrl}
+              class={`px-2.5 py-1 rounded-md text-xs font-bold transition-all duration-200 ${isEn ? 'bg-[#c9a96e] text-[#122926]' : 'text-white/50 hover:text-white'}`}
+            >EN</a>
+          </li>
           <li>
-            <a href="/contact"
+            <a href={`${prefix}/contact`}
                class="bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-5 py-2 rounded-lg transition-colors duration-200">
               Contact
             </a>

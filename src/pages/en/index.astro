@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout
-  lang="fr"
-  title="Hamza Cherkaoui — Formateur Expert en Management de Projet, PMO & IA"
-  description="J'accompagne les entreprises et les professionnels à monter en compétences sur la gestion de projet, la gouvernance PMO et l'intégration de l'IA."
+  lang="en"
+  title="Hamza Cherkaoui — Expert Trainer in Project Management, PMO & AI"
+  description="I help companies and professionals develop their skills in project management, PMO governance and AI integration — with 100% practical, results-oriented training."
 >
 
   <!-- ════════════════════════════════════════
@@ -15,35 +15,30 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
-        <!-- LEFT: text (order-2 on mobile so photo appears first) -->
+        <!-- LEFT: text -->
         <div class="order-2 md:order-1 flex-1 flex flex-col gap-6 text-center md:text-left items-center md:items-start">
 
-          <!-- Name -->
           <p class="text-xl md:text-2xl text-[#c9a96e] font-light tracking-widest mb-1">
             Hamza CHERKAOUI
           </p>
 
-          <!-- Eyebrow -->
           <p class="text-[#c9a96e] text-xs font-bold uppercase tracking-[0.2em]">
             From Governance to Performance, Powered by Technology
           </p>
 
-          <!-- Headline -->
           <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-            Formateur Expert en<br />
-            Management de Projet,<br />
-            <span class="text-[#c9a96e]">PMO &amp; IA</span>
+            Expert Trainer in<br />
+            Project Management,<br />
+            <span class="text-[#c9a96e]">PMO &amp; AI</span>
           </h1>
 
-          <!-- Description -->
           <p class="text-white/70 text-lg leading-relaxed max-w-xl">
-            J'accompagne les entreprises et les professionnels à monter en compétences
-            sur la gestion de projet, la gouvernance PMO et l'intégration de l'IA —
-            avec des formations <strong class="text-white font-semibold">100% pratiques</strong>
-            et orientées résultats.
+            I help companies and professionals develop their skills in project management,
+            PMO governance and AI integration — with training that is
+            <strong class="text-white font-semibold">100% practical</strong>
+            and results-oriented.
           </p>
 
-          <!-- CTAs -->
           <div class="flex flex-col sm:flex-row gap-4 pt-2">
             <a
               href="https://calendly.com/hamzacherkaoui"
@@ -54,13 +49,13 @@ import Layout from '../layouts/Layout.astro';
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
               </svg>
-              Réserver une session
+              Book a session
             </a>
             <a
-              href="/formations"
+              href="/en/formations"
               class="inline-flex items-center justify-center border border-white/25 hover:border-[#c9a96e] hover:text-[#c9a96e] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200"
             >
-              Découvrir les formations
+              Explore training programs
               <svg class="ml-2" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -69,21 +64,17 @@ import Layout from '../layouts/Layout.astro';
 
         </div>
 
-        <!-- RIGHT: photo (order-1 on mobile so it appears on top) -->
+        <!-- RIGHT: photo -->
         <div class="order-1 md:order-2 flex-shrink-0">
-          <!-- Outer wrapper: holds the gold glow ring -->
           <div class="relative">
             <div class="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#c9a96e] to-[#d4b87e] opacity-35 blur-sm"></div>
-            <!-- Inner wrapper: overflow-hidden clips the gradient overlays to the rounded frame -->
             <div class="relative w-64 h-80 md:w-80 md:h-[520px] rounded-2xl overflow-hidden border-4 border-[#c9a96e]/40 shadow-2xl">
               <img
                 src="/photo-hamza.jpg.JPG"
                 alt="Hamza Cherkaoui"
                 class="w-full h-full object-cover object-top"
               />
-              <!-- Right-side vignette: fades out background content -->
               <div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#1a3a35]/80"></div>
-              <!-- Bottom vignette: softens lower edge -->
               <div class="absolute inset-0 bg-gradient-to-t from-[#1a3a35]/60 via-transparent to-transparent"></div>
             </div>
           </div>
@@ -100,33 +91,31 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-[#1a3a35] py-16 px-6">
     <div class="max-w-5xl mx-auto">
 
-      <!-- Header -->
       <div class="text-center mb-12 reveal">
-        <p class="text-[#c9a96e] text-xs font-bold uppercase tracking-[0.25em] mb-3">En chiffres</p>
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Une expertise qui se mesure</h2>
+        <p class="text-[#c9a96e] text-xs font-bold uppercase tracking-[0.25em] mb-3">By the numbers</p>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Expertise that delivers results</h2>
       </div>
 
-      <!-- Stats grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
 
         <div class="reveal bg-[#1a3a35] flex flex-col items-center justify-center gap-2 py-10 px-6 text-center">
           <p class="text-4xl md:text-5xl font-bold text-[#c9a96e]">50+</p>
-          <p class="text-sm text-white/70 font-medium leading-snug">Projets menés</p>
+          <p class="text-sm text-white/70 font-medium leading-snug">Projects delivered</p>
         </div>
 
         <div class="reveal reveal-delay-1 bg-[#1a3a35] flex flex-col items-center justify-center gap-2 py-10 px-6 text-center">
           <p class="text-4xl md:text-5xl font-bold text-[#c9a96e]">12+</p>
-          <p class="text-sm text-white/70 font-medium leading-snug">Années d'expérience</p>
+          <p class="text-sm text-white/70 font-medium leading-snug">Years of experience</p>
         </div>
 
         <div class="reveal reveal-delay-2 bg-[#1a3a35] flex flex-col items-center justify-center gap-2 py-10 px-6 text-center">
           <p class="text-4xl md:text-5xl font-bold text-[#c9a96e]">320+</p>
-          <p class="text-sm text-white/70 font-medium leading-snug">Professionnels formés</p>
+          <p class="text-sm text-white/70 font-medium leading-snug">Professionals trained</p>
         </div>
 
         <div class="reveal reveal-delay-3 bg-[#1a3a35] flex flex-col items-center justify-center gap-2 py-10 px-6 text-center">
           <p class="text-4xl md:text-5xl font-bold text-[#c9a96e]">35+</p>
-          <p class="text-sm text-white/70 font-medium leading-snug">Missions réalisées</p>
+          <p class="text-sm text-white/70 font-medium leading-snug">Missions completed</p>
         </div>
 
       </div>
@@ -141,15 +130,15 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-6xl mx-auto">
 
       <div class="text-center mb-14">
-        <h2 class="text-3xl font-bold tracking-tight text-[#1a3a35] mb-3 reveal">Mes Formations</h2>
+        <h2 class="text-3xl font-bold tracking-tight text-[#1a3a35] mb-3 reveal">My Training Programs</h2>
         <p class="text-[#64748B] max-w-xl mx-auto reveal reveal-delay-1">
-          Des programmes conçus pour un impact immédiat dans votre organisation.
+          Programs designed for immediate impact in your organization.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- Card 1 — PM Fundamentals -->
+        <!-- Card 1 -->
         <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 flex flex-col card-hover reveal">
           <div class="w-10 h-10 rounded-xl bg-[#c9a96e]/10 flex items-center justify-center mb-5">
             <svg width="20" height="20" fill="none" stroke="#c9a96e" stroke-width="2" viewBox="0 0 24 24">
@@ -158,17 +147,17 @@ import Layout from '../layouts/Layout.astro';
               <path d="m9 12 2 2 4-4"/>
             </svg>
           </div>
-          <span class="text-[11px] font-bold uppercase tracking-widest text-emerald-500 mb-2">Débutant</span>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#c9a96e] bg-[#c9a96e]/15 px-2 py-0.5 rounded-full self-start mb-2">Beginner</span>
           <h3 class="text-base font-bold text-[#1a3a35] leading-snug mb-3">Project Management Fundamentals</h3>
           <p class="text-sm text-[#64748B] flex items-center gap-1.5">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
-            2–3 jours
+            2–3 days
           </p>
           <div class="mt-auto pt-5 border-t border-[#E2E8F0]">
-            <a href="/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
-              En savoir plus
+            <a href="/en/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
+              Learn more
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -176,7 +165,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Card 2 — Advanced PM -->
+        <!-- Card 2 -->
         <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 flex flex-col card-hover reveal reveal-delay-1">
           <div class="w-10 h-10 rounded-xl bg-[#c9a96e]/10 flex items-center justify-center mb-5">
             <svg width="20" height="20" fill="none" stroke="#c9a96e" stroke-width="2" viewBox="0 0 24 24">
@@ -184,17 +173,17 @@ import Layout from '../layouts/Layout.astro';
               <polyline points="16 7 22 7 22 13"/>
             </svg>
           </div>
-          <span class="text-[11px] font-bold uppercase tracking-widest text-orange-500 mb-2">Avancé</span>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#c9a96e] bg-[#c9a96e]/15 px-2 py-0.5 rounded-full self-start mb-2">Advanced</span>
           <h3 class="text-base font-bold text-[#1a3a35] leading-snug mb-3">Advanced Project Management</h3>
           <p class="text-sm text-[#64748B] flex items-center gap-1.5">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
-            3 jours
+            3 days
           </p>
           <div class="mt-auto pt-5 border-t border-[#E2E8F0]">
-            <a href="/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
-              En savoir plus
+            <a href="/en/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
+              Learn more
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -202,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Card 3 — AI Integration -->
+        <!-- Card 3 -->
         <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 flex flex-col card-hover reveal reveal-delay-2">
           <div class="w-10 h-10 rounded-xl bg-[#c9a96e]/10 flex items-center justify-center mb-5">
             <svg width="20" height="20" fill="none" stroke="#c9a96e" stroke-width="2" viewBox="0 0 24 24">
@@ -211,17 +200,17 @@ import Layout from '../layouts/Layout.astro';
               <circle cx="16.5" cy="14.5" r="1.5" fill="#c9a96e" stroke="none"/>
             </svg>
           </div>
-          <span class="text-[11px] font-bold uppercase tracking-widest text-violet-500 mb-2">Tous niveaux</span>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#c9a96e] bg-[#c9a96e]/15 px-2 py-0.5 rounded-full self-start mb-2">All levels</span>
           <h3 class="text-base font-bold text-[#1a3a35] leading-snug mb-3">AI Integration for Business</h3>
           <p class="text-sm text-[#64748B] flex items-center gap-1.5">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
-            2 jours
+            2 days
           </p>
           <div class="mt-auto pt-5 border-t border-[#E2E8F0]">
-            <a href="/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
-              En savoir plus
+            <a href="/en/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
+              Learn more
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -229,7 +218,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Card 4 — PMO Excellence -->
+        <!-- Card 4 -->
         <div class="bg-white rounded-2xl border border-[#E2E8F0] p-6 flex flex-col card-hover reveal reveal-delay-3">
           <div class="w-10 h-10 rounded-xl bg-[#c9a96e]/10 flex items-center justify-center mb-5">
             <svg width="20" height="20" fill="none" stroke="#c9a96e" stroke-width="2" viewBox="0 0 24 24">
@@ -237,17 +226,17 @@ import Layout from '../layouts/Layout.astro';
               <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
           </div>
-          <span class="text-[11px] font-bold uppercase tracking-widest text-orange-500 mb-2">Avancé</span>
+          <span class="text-[11px] font-bold uppercase tracking-widest text-[#c9a96e] bg-[#c9a96e]/15 px-2 py-0.5 rounded-full self-start mb-2">Advanced</span>
           <h3 class="text-base font-bold text-[#1a3a35] leading-snug mb-3">PMO Excellence</h3>
           <p class="text-sm text-[#64748B] flex items-center gap-1.5">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
-            2–3 jours
+            2–3 days
           </p>
           <div class="mt-auto pt-5 border-t border-[#E2E8F0]">
-            <a href="/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
-              En savoir plus
+            <a href="/en/formations" class="text-sm font-semibold text-[#c9a96e] hover:text-[#d4b87e] transition-colors inline-flex items-center gap-1">
+              Learn more
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -267,13 +256,12 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-6xl mx-auto">
 
       <div class="text-center mb-14">
-        <h2 class="text-3xl font-bold tracking-tight text-[#1a3a35] mb-3 reveal">Ce que disent mes clients</h2>
-        <p class="text-[#64748B] reveal reveal-delay-1">Des résultats concrets, validés par des professionnels.</p>
+        <h2 class="text-3xl font-bold tracking-tight text-[#1a3a35] mb-3 reveal">What my clients say</h2>
+        <p class="text-[#64748B] reveal reveal-delay-1">Concrete results, validated by professionals.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <!-- T1 -->
         <div class="bg-[#F8FAFC] rounded-2xl border border-[#E2E8F0] p-8 flex flex-col gap-5 reveal">
           <div class="flex gap-0.5">
             {[...Array(5)].map(() => (
@@ -283,16 +271,15 @@ import Layout from '../layouts/Layout.astro';
             ))}
           </div>
           <p class="text-[#1a3a35] leading-relaxed italic text-sm flex-1">
-            "La formation sur le Management de Projet a transformé notre façon de piloter les initiatives.
-            L'approche pratique, basée sur des cas réels, nous a permis d'appliquer les concepts dès le lendemain."
+            "The Project Management training transformed the way we drive initiatives.
+            The hands-on, real-case approach allowed us to apply concepts the very next day."
           </p>
           <div class="pt-4 border-t border-[#E2E8F0]">
-            <p class="font-semibold text-[#1a3a35] text-sm">Responsable IT</p>
-            <p class="text-[#64748B] text-xs mt-0.5">Industrie Pharmaceutique</p>
+            <p class="font-semibold text-[#1a3a35] text-sm">IT Manager</p>
+            <p class="text-[#64748B] text-xs mt-0.5">Pharmaceutical Industry</p>
           </div>
         </div>
 
-        <!-- T2 -->
         <div class="bg-[#F8FAFC] rounded-2xl border border-[#E2E8F0] p-8 flex flex-col gap-5 reveal reveal-delay-1">
           <div class="flex gap-0.5">
             {[...Array(5)].map(() => (
@@ -302,17 +289,16 @@ import Layout from '../layouts/Layout.astro';
             ))}
           </div>
           <p class="text-[#1a3a35] leading-relaxed italic text-sm flex-1">
-            "Hamza a su adapter le contenu de la formation PMO Excellence à notre contexte spécifique.
-            Son expertise et sa pédagogie claire nous ont fourni des outils directement actionnables
-            pour structurer notre bureau de projets."
+            "Hamza tailored the PMO Excellence training to our specific context.
+            His expertise and clear pedagogy gave us immediately actionable tools
+            to structure our project office."
           </p>
           <div class="pt-4 border-t border-[#E2E8F0]">
-            <p class="font-semibold text-[#1a3a35] text-sm">Directeur de Projets</p>
-            <p class="text-[#64748B] text-xs mt-0.5">Secteur Bancaire & Financier</p>
+            <p class="font-semibold text-[#1a3a35] text-sm">Project Director</p>
+            <p class="text-[#64748B] text-xs mt-0.5">Banking & Financial Sector</p>
           </div>
         </div>
 
-        <!-- T3 -->
         <div class="bg-[#F8FAFC] rounded-2xl border border-[#E2E8F0] p-8 flex flex-col gap-5 reveal reveal-delay-2">
           <div class="flex gap-0.5">
             {[...Array(5)].map(() => (
@@ -322,13 +308,13 @@ import Layout from '../layouts/Layout.astro';
             ))}
           </div>
           <p class="text-[#1a3a35] leading-relaxed italic text-sm flex-1">
-            "La formation sur l'intégration de l'IA en entreprise a ouvert de nouvelles perspectives pour
-            notre équipe. Concrète, structurée et tournée vers l'action — exactement ce qu'il nous fallait
-            pour passer à l'étape suivante."
+            "The AI integration training opened new perspectives for our team.
+            Concrete, structured and action-oriented — exactly what we needed
+            to move to the next level."
           </p>
           <div class="pt-4 border-t border-[#E2E8F0]">
-            <p class="font-semibold text-[#1a3a35] text-sm">Chef de Projet Digital</p>
-            <p class="text-[#64748B] text-xs mt-0.5">Télécommunications</p>
+            <p class="font-semibold text-[#1a3a35] text-sm">Digital Project Manager</p>
+            <p class="text-[#64748B] text-xs mt-0.5">Telecommunications</p>
           </div>
         </div>
 
@@ -345,92 +331,71 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="text-center mb-14">
         <p class="text-[#c9a96e] text-xs font-bold uppercase tracking-[0.25em] mb-3 reveal">Insights</p>
-        <h2 class="text-3xl font-bold tracking-tight text-[#1a3a35] mb-3 reveal reveal-delay-1">Analyses & Perspectives</h2>
+        <h2 class="text-3xl font-bold tracking-tight text-[#1a3a35] mb-3 reveal reveal-delay-1">Analysis & Perspectives</h2>
         <p class="text-[#64748B] max-w-xl mx-auto reveal reveal-delay-2">
-          Analyses et perspectives sur le management de projet et l'IA
+          Analysis and perspectives on project management and AI
         </p>
       </div>
 
-      <!-- Article cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
 
-        <!-- Card 1 -->
         <a
           href="/insights/pmo-portfolio-prioritization-ai"
           class="group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col reveal reveal-delay-1"
         >
           <div class="w-full h-48 overflow-hidden bg-[#1a3a35]/5">
-            <img
-              src="/pmo-portfolio-prioritization-ai.png"
-              alt="Repenser la priorisation des portefeuilles projets"
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-            />
+            <img src="/pmo-portfolio-prioritization-ai.png" alt="Reframing Project Portfolio Prioritization"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"/>
           </div>
           <div class="p-6 flex flex-col gap-3 flex-1">
             <div class="flex items-center justify-between">
-              <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
-                PMO &amp; IA
-              </span>
+              <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">PMO &amp; AI</span>
               <span class="text-xs text-[#64748B] flex items-center gap-1">
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-                </svg>
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                 5 min
               </span>
             </div>
             <h3 class="text-base font-bold text-[#1a3a35] leading-snug group-hover:text-[#c9a96e] transition-colors duration-200">
-              Repenser la priorisation des portefeuilles projets
+              Reframing Project Portfolio Prioritization
             </h3>
             <p class="text-sm text-[#64748B] leading-relaxed flex-1">
-              La priorisation du portefeuille projets a toujours été l'une des responsabilités les plus critiques du PMO. L'IA change fondamentalement la donne.
+              Portfolio prioritization has always been one of the most critical PMO responsibilities. AI fundamentally changes the game.
             </p>
             <div class="pt-3 border-t border-[#E2E8F0] mt-auto">
               <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] group-hover:gap-2.5 transition-all duration-200">
-                Lire l'article
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+                Read article
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </span>
             </div>
           </div>
         </a>
 
-        <!-- Card 2 -->
         <a
           href="/insights/ai-everyday-professional"
           class="group bg-white rounded-2xl border border-[#E2E8F0] overflow-hidden card-hover hover:border-[#c9a96e] transition-colors duration-300 flex flex-col reveal reveal-delay-2"
         >
           <div class="w-full h-48 overflow-hidden bg-[#1a3a35]/5">
-            <img
-              src="/ai-everyday-professional.png"
-              alt="L'IA au service du quotidien professionnel"
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-            />
+            <img src="/ai-everyday-professional.png" alt="AI for Everyday Professional Use"
+              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"/>
           </div>
           <div class="p-6 flex flex-col gap-3 flex-1">
             <div class="flex items-center justify-between">
-              <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
-                Intelligence Artificielle
-              </span>
+              <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">Artificial Intelligence</span>
               <span class="text-xs text-[#64748B] flex items-center gap-1">
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-                </svg>
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                 6 min
               </span>
             </div>
             <h3 class="text-base font-bold text-[#1a3a35] leading-snug group-hover:text-[#c9a96e] transition-colors duration-200">
-              L'IA au service du quotidien professionnel
+              AI for Everyday Professional Use
             </h3>
             <p class="text-sm text-[#64748B] leading-relaxed flex-1">
-              L'IA transforme profondément la façon dont nous travaillons. Communication, rapports, automatisation — découvrez comment l'intégrer concrètement dans votre quotidien.
+              AI is profoundly transforming the way we work. Communication, reports, automation — discover how to integrate it concretely into your daily routine.
             </p>
             <div class="pt-3 border-t border-[#E2E8F0] mt-auto">
               <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c9a96e] group-hover:gap-2.5 transition-all duration-200">
-                Lire l'article
-                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+                Read article
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </span>
             </div>
           </div>
@@ -438,16 +403,11 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
 
-      <!-- See all CTA -->
       <div class="text-center mt-12 reveal">
-        <a
-          href="/insights"
-          class="inline-flex items-center gap-2 border border-[#1a3a35] hover:bg-[#1a3a35] hover:text-white text-[#1a3a35] font-semibold px-8 py-3.5 rounded-xl transition-all duration-200"
-        >
-          Voir tous les articles
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
+        <a href="/en/insights"
+          class="inline-flex items-center gap-2 border border-[#1a3a35] hover:bg-[#1a3a35] hover:text-white text-[#1a3a35] font-semibold px-8 py-3.5 rounded-xl transition-all duration-200">
+          View all articles
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
 
@@ -461,16 +421,16 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-[#122926] py-24 px-6">
     <div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 reveal">
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-        Prêt à former vos équipes ?
+        Ready to train your teams?
       </h2>
       <p class="text-white/60 text-lg">
-        Contactez-moi pour un programme sur mesure.
+        Contact me for a tailored program.
       </p>
       <a
-        href="/contact"
+        href="/en/contact"
         class="inline-flex items-center justify-center gap-2 bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-10 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-black/20"
       >
-        Prendre contact
+        Get in touch
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
@@ -482,7 +442,6 @@ import Layout from '../layouts/Layout.astro';
 
 
 <script>
-  // Scroll-reveal via IntersectionObserver
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -494,6 +453,5 @@ import Layout from '../layouts/Layout.astro';
     },
     { threshold: 0.12 }
   );
-
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 </script>

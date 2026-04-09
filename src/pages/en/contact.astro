@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 
 const contactCards = [
   {
@@ -16,7 +16,7 @@ const contactCards = [
     icon: `<svg width="22" height="22" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/>
     </svg>`,
-    label: "WhatsApp & Téléphone",
+    label: "WhatsApp & Phone",
     value: "+212 676 739 962",
     href: "https://wa.me/212676739962",
     cta: null,
@@ -26,57 +26,57 @@ const contactCards = [
       <rect x="3" y="4" width="18" height="18" rx="2"/>
       <path d="M16 2v4M8 2v4M3 10h18"/>
     </svg>`,
-    label: "Réserver directement",
-    value: "Choisissez un créneau sur mon Calendly",
+    label: "Book directly",
+    value: "Choose a time slot on my Calendly",
     href: "https://calendly.com/hamzacherkaoui",
-    cta: "Ouvrir le Calendly",
+    cta: "Open Calendly",
   },
   {
     icon: `<svg width="22" height="22" fill="none" stroke="#c9a96e" stroke-width="1.75" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="10"/>
       <polyline points="12 6 12 12 16 14"/>
     </svg>`,
-    label: "Délai de réponse",
-    value: "Sous 24h en général",
+    label: "Response time",
+    value: "Within 24 hours typically",
     href: null,
     cta: null,
   },
 ];
 
-const sujets = [
-  "Formation Project Management",
-  "Formation PMO Excellence",
-  "Formation AI Integration",
-  "Formation Advanced PM",
-  "Formation sur mesure",
-  "Conseil / Advisory",
-  "Autre",
+const subjects = [
+  "Project Management Training",
+  "PMO Excellence Training",
+  "AI Integration Training",
+  "Advanced PM Training",
+  "Custom Training",
+  "Consulting / Advisory",
+  "Other",
 ];
 
 const faqs = [
   {
-    q: "Les formations sont-elles disponibles en ligne ?",
-    a: "Oui, toutes mes formations sont disponibles en présentiel ou à distance. Je m'adapte à vos contraintes logistiques et organisationnelles.",
+    q: "Are the training programs available online?",
+    a: "Yes, all my training programs are available in-person or remotely. I adapt to your logistical and organizational constraints.",
   },
   {
-    q: "Proposez-vous des formations sur mesure ?",
-    a: "Absolument. Chaque programme peut être adapté à votre secteur, vos équipes et vos objectifs spécifiques. Contactez-moi pour en discuter.",
+    q: "Do you offer custom training programs?",
+    a: "Absolutely. Every program can be tailored to your sector, your teams and your specific objectives. Contact me to discuss.",
   },
   {
-    q: "Quelle est la taille idéale d'un groupe ?",
-    a: "Pour garantir une expérience optimale, je recommande des groupes de 8 à 15 personnes. Des formats plus petits ou plus grands sont également possibles selon vos besoins.",
+    q: "What is the ideal group size?",
+    a: "To ensure an optimal experience, I recommend groups of 8 to 15 people. Smaller or larger formats are also possible depending on your needs.",
   },
   {
-    q: "Proposez-vous des certifications ?",
-    a: "Les formations s'appuient sur les standards internationaux (PMP, PRINCE2). Des attestations de formation sont délivrées à l'issue de chaque programme.",
+    q: "Do you offer certifications?",
+    a: "The training programs are based on international standards (PMP, PRINCE2). Completion certificates are issued at the end of each program.",
   },
 ];
 ---
 
 <Layout
-  lang="fr"
-  title="Contact — Hamza Cherkaoui"
-  description="Contactez Hamza Cherkaoui pour vos besoins en formation ou en conseil."
+  lang="en"
+  title="Contact Me — Hamza Cherkaoui"
+  description="Contact Hamza Cherkaoui for your training or consulting needs."
 >
 
   <!-- ════════════════════════════════════════
@@ -85,10 +85,10 @@ const faqs = [
   <section class="bg-[#1a3a35] text-white pt-16 pb-20 px-6">
     <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-5">
       <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
-        Contactez-moi
+        Contact Me
       </h1>
       <p class="text-white/70 text-lg leading-relaxed max-w-xl">
-        Discutons de vos besoins en formation ou en conseil.
+        Let's discuss your training or consulting needs.
       </p>
       <div class="w-16 h-[3px] rounded-full bg-[#c9a96e] mt-1"></div>
     </div>
@@ -103,7 +103,6 @@ const faqs = [
 
       <!-- LEFT — Contact info cards -->
       <div class="lg:col-span-2 flex flex-col gap-4 reveal">
-
         {contactCards.map(card => (
           <div class="bg-white rounded-xl border-l-4 border-[#c9a96e] border-t border-r border-b border-t-[#E2E8F0] border-r-[#E2E8F0] border-b-[#E2E8F0] px-5 py-5 flex flex-col gap-2 shadow-sm">
             <div class="flex items-center gap-2.5">
@@ -139,7 +138,7 @@ const faqs = [
 
       <!-- RIGHT — Contact form -->
       <div class="lg:col-span-3 bg-white rounded-2xl border border-[#E2E8F0] p-8 shadow-sm reveal reveal-delay-1">
-        <h2 class="text-xl font-bold text-[#1a3a35] mb-6">Envoyez-moi un message</h2>
+        <h2 class="text-xl font-bold text-[#1a3a35] mb-6">Send me a message</h2>
 
         <form
           class="flex flex-col gap-5"
@@ -147,63 +146,60 @@ const faqs = [
           action="https://formspree.io/f/xpqoezdb"
           method="POST"
         >
-          <input type="hidden" name="_language" value="fr" />
-          <input type="hidden" name="_subject" value="Nouveau message - Site Hamza Cherkaoui" />
+          <input type="hidden" name="_language" value="en" />
+          <input type="hidden" name="_subject" value="New message - Hamza Cherkaoui Website" />
 
-          <!-- Row 1: Nom + Email -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
               <label for="nom" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">
-                Nom complet <span class="text-rose-400">*</span>
+                Full name <span class="text-rose-400">*</span>
               </label>
               <input
                 id="nom" name="nom" type="text" required
-                placeholder="Votre nom"
+                placeholder="Your name"
                 class="w-full rounded-lg border border-[#E2E8F0] bg-[#f8f8f6] px-4 py-3 text-sm text-[#1a3a35] placeholder-[#94a3b8] outline-none focus:border-[#c9a96e] focus:ring-2 focus:ring-[#c9a96e]/20 transition"
               />
             </div>
             <div class="flex flex-col gap-1.5">
               <label for="email" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">
-                Email professionnel <span class="text-rose-400">*</span>
+                Professional email <span class="text-rose-400">*</span>
               </label>
               <input
                 id="email" name="email" type="email" required
-                placeholder="vous@entreprise.com"
+                placeholder="you@company.com"
                 class="w-full rounded-lg border border-[#E2E8F0] bg-[#f8f8f6] px-4 py-3 text-sm text-[#1a3a35] placeholder-[#94a3b8] outline-none focus:border-[#c9a96e] focus:ring-2 focus:ring-[#c9a96e]/20 transition"
               />
             </div>
           </div>
 
-          <!-- Row 2: Entreprise + Téléphone -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="flex flex-col gap-1.5">
-              <label for="entreprise" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">Entreprise</label>
+              <label for="entreprise" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">Company</label>
               <input
                 id="entreprise" name="entreprise" type="text"
-                placeholder="Nom de votre organisation"
+                placeholder="Your organization name"
                 class="w-full rounded-lg border border-[#E2E8F0] bg-[#f8f8f6] px-4 py-3 text-sm text-[#1a3a35] placeholder-[#94a3b8] outline-none focus:border-[#c9a96e] focus:ring-2 focus:ring-[#c9a96e]/20 transition"
               />
             </div>
             <div class="flex flex-col gap-1.5">
-              <label for="telephone" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">Téléphone</label>
+              <label for="telephone" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">Phone</label>
               <input
                 id="telephone" name="telephone" type="tel"
-                placeholder="+212 6XX XXX XXX"
+                placeholder="+1 XXX XXX XXXX"
                 class="w-full rounded-lg border border-[#E2E8F0] bg-[#f8f8f6] px-4 py-3 text-sm text-[#1a3a35] placeholder-[#94a3b8] outline-none focus:border-[#c9a96e] focus:ring-2 focus:ring-[#c9a96e]/20 transition"
               />
             </div>
           </div>
 
-          <!-- Sujet -->
           <div class="flex flex-col gap-1.5">
-            <label for="sujet" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">Sujet</label>
+            <label for="sujet" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">Subject</label>
             <div class="relative">
               <select
                 id="sujet" name="sujet"
                 class="w-full appearance-none rounded-lg border border-[#E2E8F0] bg-[#f8f8f6] px-4 py-3 pr-10 text-sm text-[#1a3a35] outline-none focus:border-[#c9a96e] focus:ring-2 focus:ring-[#c9a96e]/20 transition cursor-pointer"
               >
-                <option value="" disabled selected>Sélectionnez un sujet</option>
-                {sujets.map(s => <option value={s}>{s}</option>)}
+                <option value="" disabled selected>Select a subject</option>
+                {subjects.map(s => <option value={s}>{s}</option>)}
               </select>
               <svg class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#94a3b8]" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <polyline points="6 9 12 15 18 9"/>
@@ -211,19 +207,17 @@ const faqs = [
             </div>
           </div>
 
-          <!-- Message -->
           <div class="flex flex-col gap-1.5">
             <label for="message" class="text-xs font-semibold uppercase tracking-wider text-[#1a3a35]">
               Message <span class="text-rose-400">*</span>
             </label>
             <textarea
               id="message" name="message" required rows="5"
-              placeholder="Décrivez vos besoins, le nombre de participants, vos dates souhaitées..."
+              placeholder="Describe your needs, number of participants, desired dates..."
               class="w-full rounded-lg border border-[#E2E8F0] bg-[#f8f8f6] px-4 py-3 text-sm text-[#1a3a35] placeholder-[#94a3b8] outline-none focus:border-[#c9a96e] focus:ring-2 focus:ring-[#c9a96e]/20 transition resize-none"
             ></textarea>
           </div>
 
-          <!-- Submit -->
           <button
             type="submit"
             class="inline-flex items-center justify-center gap-2 bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-md shadow-black/10"
@@ -232,26 +226,24 @@ const faqs = [
               <line x1="22" y1="2" x2="11" y2="13"/>
               <polygon points="22 2 15 22 11 13 2 9 22 2"/>
             </svg>
-            Envoyer le message
+            Send message
           </button>
 
-          <!-- Privacy note -->
           <p class="text-xs text-[#94a3b8] flex items-center gap-1.5">
             <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <rect x="3" y="11" width="18" height="11" rx="2"/>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
-            Vos données sont confidentielles et ne seront jamais partagées.
+            Your data is confidential and will never be shared.
           </p>
 
         </form>
 
-        <!-- Success message (hidden by default) -->
         <div
           id="success-message"
           class="hidden mt-4 bg-emerald-600 text-white text-sm font-medium px-5 py-4 rounded-xl flex items-center gap-2"
         >
-          ✅ Votre message a bien été envoyé ! Je vous répondrai sous 24h.
+          ✅ Your message has been sent! I'll get back to you within 24 hours.
         </div>
 
       </div>
@@ -268,17 +260,16 @@ const faqs = [
 
       <div class="text-center mb-12 reveal">
         <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-[#1a3a35] mb-3">
-          Questions Fréquentes
+          Frequently Asked Questions
         </h2>
         <div class="w-12 h-[2px] rounded-full bg-[#c9a96e] mx-auto mt-4"></div>
       </div>
 
       <div class="flex flex-col gap-3 reveal reveal-delay-1">
-        {faqs.map((faq, i) => (
+        {faqs.map((faq) => (
           <details class="group bg-[#f8f8f6] rounded-xl border border-[#E2E8F0] overflow-hidden">
             <summary class="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none select-none hover:bg-[#c9a96e]/5 transition-colors">
               <span class="text-sm font-semibold text-[#1a3a35]">{faq.q}</span>
-              <!-- Chevron rotates on open -->
               <svg class="flex-shrink-0 text-[#c9a96e] transition-transform duration-300 group-open:rotate-180" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
@@ -300,10 +291,10 @@ const faqs = [
   <section class="bg-[#122926] py-20 px-6">
     <div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-6 reveal">
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white leading-snug">
-        Prêt à passer à l'action ?
+        Ready to take action?
       </h2>
       <p class="text-white/60 text-lg">
-        Réservez directement un créneau dans mon agenda.
+        Book a time slot directly in my calendar.
       </p>
       <a
         href="https://calendly.com/hamzacherkaoui"
@@ -314,7 +305,7 @@ const faqs = [
         <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
         </svg>
-        Réserver sur Calendly
+        Book on Calendly
       </a>
     </div>
   </section>
@@ -323,7 +314,6 @@ const faqs = [
 
 
 <style>
-  /* Smooth accordion animation */
   details > div {
     animation: faq-open 0.25s ease;
   }
@@ -331,8 +321,6 @@ const faqs = [
     from { opacity: 0; transform: translateY(-6px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
-  /* Gold focus ring for form inputs */
   input:focus, select:focus, textarea:focus {
     border-color: #c9a96e;
     box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
@@ -341,7 +329,6 @@ const faqs = [
 
 
 <script>
-  /* Scroll reveal */
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -355,40 +342,33 @@ const faqs = [
   );
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-  /* Formspree submission */
   const form = document.getElementById('contact-form') as HTMLFormElement | null;
   const successMsg = document.getElementById('success-message') as HTMLElement | null;
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-
     const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     const originalHTML = btn.innerHTML;
-
-    // Loading state
     btn.disabled = true;
-    btn.textContent = 'Envoi en cours…';
-
+    btn.textContent = 'Sending…';
     try {
       const response = await fetch('https://formspree.io/f/xpqoezdb', {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' },
       });
-
       if (response.ok) {
-        // Hide form, show success message
         form.style.display = 'none';
         if (successMsg) successMsg.classList.remove('hidden');
       } else {
         btn.disabled = false;
         btn.innerHTML = originalHTML;
-        alert('Une erreur est survenue, veuillez réessayer.');
+        alert('An error occurred. Please try again.');
       }
     } catch {
       btn.disabled = false;
       btn.innerHTML = originalHTML;
-      alert('Une erreur est survenue, veuillez réessayer.');
+      alert('An error occurred. Please try again.');
     }
   });
 </script>
