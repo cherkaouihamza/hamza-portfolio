@@ -10,15 +10,57 @@ import Layout from '../../layouts/Layout.astro';
   <!-- ════════════════════════════════════════
        HERO IMAGE
   ════════════════════════════════════════ -->
-  <div class="w-full bg-[#1a3a35] relative overflow-hidden" style="max-height:400px;">
+  <div class="w-full relative overflow-hidden h-[300px] md:h-[400px]">
+    <!-- Background image -->
     <img
       src="/pmo-portfolio-prioritization-ai.png"
       alt="Repenser la priorisation des portefeuilles projets"
-      class="w-full object-cover object-center"
-      style="max-height:400px;"
+      class="absolute inset-0 w-full h-full object-cover object-center"
     />
-    <!-- Dark overlay for readability -->
-    <div class="absolute inset-0 bg-gradient-to-t from-[#1a3a35]/70 via-transparent to-transparent"></div>
+    <!-- Dark gradient overlay -->
+    <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(18,41,38,0.3) 0%, rgba(18,41,38,0.85) 100%);"></div>
+
+    <!-- FR/EN Toggle — top right -->
+    <div class="absolute top-4 right-4 flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-1">
+      <button
+        id="btn-fr"
+        onclick="setLang('fr')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 bg-white text-[#1a3a35]"
+      >
+        FR
+      </button>
+      <button
+        id="btn-en"
+        onclick="setLang('en')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 text-white/80 hover:text-white"
+      >
+        EN
+      </button>
+    </div>
+
+    <!-- Content overlay — bottom left -->
+    <div class="absolute bottom-0 left-0 right-0 px-6 pb-8 pt-4 max-w-5xl mx-auto">
+      <!-- Badge + read time -->
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/20 border border-[#c9a96e]/30">
+          PMO &amp; IA
+        </span>
+        <span class="text-xs text-white/70 flex items-center gap-1.5">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          5 min
+        </span>
+      </div>
+      <!-- FR title -->
+      <h1 id="hero-title-fr" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl">
+        Repenser la priorisation des portefeuilles projets : du défi structurel du PMO à l'opportunité IA
+      </h1>
+      <!-- EN title -->
+      <h1 id="hero-title-en" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl hidden">
+        Reframing Project Portfolio Prioritization: From a Structural PMO Challenge to an AI-Driven Opportunity
+      </h1>
+    </div>
   </div>
 
 
@@ -28,8 +70,8 @@ import Layout from '../../layouts/Layout.astro';
   <section class="bg-[#f8f8f6] py-16 px-6">
     <div class="max-w-3xl mx-auto">
 
-      <!-- Back + Toggle row -->
-      <div class="flex items-center justify-between mb-10 flex-wrap gap-4">
+      <!-- Back link -->
+      <div class="mb-10">
         <a
           href="/insights"
           class="inline-flex items-center gap-2 text-sm text-[#64748B] hover:text-[#1a3a35] transition-colors font-medium"
@@ -39,46 +81,12 @@ import Layout from '../../layouts/Layout.astro';
           </svg>
           Retour aux Insights
         </a>
-
-        <!-- FR / EN Toggle -->
-        <div class="flex items-center gap-1 bg-white border border-[#E2E8F0] rounded-xl p-1 shadow-sm">
-          <button
-            id="btn-fr"
-            onclick="setLang('fr')"
-            class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 bg-[#1a3a35] text-white"
-          >
-            FR
-          </button>
-          <button
-            id="btn-en"
-            onclick="setLang('en')"
-            class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 text-[#64748B] hover:text-[#1a3a35]"
-          >
-            EN
-          </button>
-        </div>
-      </div>
-
-      <!-- Meta -->
-      <div class="flex items-center gap-3 mb-6">
-        <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/15">
-          PMO &amp; IA
-        </span>
-        <span class="text-sm text-[#64748B] flex items-center gap-1.5">
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-          </svg>
-          5 min
-        </span>
       </div>
 
 
       <!-- ── FRENCH VERSION ── -->
       <article id="content-fr" class="prose-article">
 
-        <h1 class="text-3xl md:text-4xl font-bold text-[#1a3a35] leading-tight mb-10">
-          Repenser la priorisation des portefeuilles projets : du défi structurel du PMO à l'opportunité IA
-        </h1>
 
         <div class="article-section">
           <h2>Introduction</h2>
@@ -194,10 +202,6 @@ import Layout from '../../layouts/Layout.astro';
 
       <!-- ── ENGLISH VERSION ── -->
       <article id="content-en" class="prose-article hidden">
-
-        <h1 class="text-3xl md:text-4xl font-bold text-[#1a3a35] leading-tight mb-10">
-          Reframing Project Portfolio Prioritization: From a Structural PMO Challenge to an AI-Driven Opportunity
-        </h1>
 
         <div class="article-section">
           <h2>Introduction</h2>
@@ -396,23 +400,29 @@ import Layout from '../../layouts/Layout.astro';
     const en = document.getElementById('content-en');
     const btnFr = document.getElementById('btn-fr');
     const btnEn = document.getElementById('btn-en');
+    const heroFr = document.getElementById('hero-title-fr');
+    const heroEn = document.getElementById('hero-title-en');
 
-    if (!fr || !en || !btnFr || !btnEn) return;
+    if (!fr || !en || !btnFr || !btnEn || !heroFr || !heroEn) return;
 
     if (lang === 'fr') {
       fr.classList.remove('hidden');
       en.classList.add('hidden');
-      btnFr.classList.add('bg-[#1a3a35]', 'text-white');
-      btnFr.classList.remove('text-[#64748B]');
-      btnEn.classList.remove('bg-[#1a3a35]', 'text-white');
-      btnEn.classList.add('text-[#64748B]');
+      heroFr.classList.remove('hidden');
+      heroEn.classList.add('hidden');
+      btnFr.classList.add('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.remove('text-white/80');
+      btnEn.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.add('text-white/80');
     } else {
       en.classList.remove('hidden');
       fr.classList.add('hidden');
-      btnEn.classList.add('bg-[#1a3a35]', 'text-white');
-      btnEn.classList.remove('text-[#64748B]');
-      btnFr.classList.remove('bg-[#1a3a35]', 'text-white');
-      btnFr.classList.add('text-[#64748B]');
+      heroEn.classList.remove('hidden');
+      heroFr.classList.add('hidden');
+      btnEn.classList.add('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.remove('text-white/80');
+      btnFr.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.add('text-white/80');
     }
   }
 
