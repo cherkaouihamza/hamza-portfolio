@@ -103,7 +103,8 @@ const ogImage = "https://cherkaouihamza.ma/photo-hamza.jpg";
           <li><a href={`${prefix}/case-studies`} class="nav-link text-white/80">Case Studies</a></li>
           <li><a href={`${prefix}/about`} class="nav-link text-white/80">About</a></li>
           <li><a href={`${prefix}/insights`} class="nav-link text-white/80">Insights</a></li>
-          <!-- Language switcher -->
+          <!-- Language switcher (hidden on article pages) -->
+          {!pathname.includes('/insights/') && (
           <li class="flex items-center gap-1 border border-white/20 rounded-lg p-0.5">
             <a
               href={frUrl}
@@ -114,6 +115,7 @@ const ogImage = "https://cherkaouihamza.ma/photo-hamza.jpg";
               class={`px-2.5 py-1 rounded-md text-xs font-bold transition-all duration-200 ${isEn ? 'bg-[#c9a96e] text-[#122926]' : 'text-white/50 hover:text-white'}`}
             >EN</a>
           </li>
+          )}
           <li>
             <a href={`${prefix}/contact`}
                class="bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-5 py-2 rounded-lg transition-colors duration-200">
