@@ -124,12 +124,33 @@ const ogImage = "https://cherkaouihamza.ma/photo-hamza.jpg";
           </li>
         </ul>
         <!-- Mobile menu button -->
-        <button class="md:hidden p-2 text-white/80" aria-label="Menu">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-white/80" aria-label="Menu" aria-expanded="false">
+          <svg id="icon-open" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="icon-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="hidden">
+            <path d="M18 6L6 18M6 6l12 12"/>
           </svg>
         </button>
       </nav>
+
+      <!-- Mobile menu panel -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#1a3a35] border-t border-[#c9a96e]/20 px-6 py-4 flex flex-col gap-4">
+        <a href={`${prefix}/`} class="text-white/80 hover:text-white text-sm font-medium py-1">{isEn ? 'Home' : 'Accueil'}</a>
+        <a href={`${prefix}/formations`} class="text-white/80 hover:text-white text-sm font-medium py-1">{isEn ? 'Training' : 'Formations'}</a>
+        <a href={`${prefix}/case-studies`} class="text-white/80 hover:text-white text-sm font-medium py-1">Case Studies</a>
+        <a href={`${prefix}/about`} class="text-white/80 hover:text-white text-sm font-medium py-1">About</a>
+        <a href={`${prefix}/insights`} class="text-white/80 hover:text-white text-sm font-medium py-1">Insights</a>
+        {!pathname.includes('/insights/') && (
+        <div class="flex items-center gap-1 border border-white/20 rounded-lg p-0.5 w-fit">
+          <a href={frUrl} class={`px-2.5 py-1 rounded-md text-xs font-bold transition-all duration-200 ${!isEn ? 'bg-[#c9a96e] text-[#122926]' : 'text-white/50 hover:text-white'}`}>FR</a>
+          <a href={enUrl} class={`px-2.5 py-1 rounded-md text-xs font-bold transition-all duration-200 ${isEn ? 'bg-[#c9a96e] text-[#122926]' : 'text-white/50 hover:text-white'}`}>EN</a>
+        </div>
+        )}
+        <a href={`${prefix}/contact`} class="bg-[#c9a96e] hover:bg-[#d4b87e] text-[#122926] font-semibold px-5 py-2 rounded-lg transition-colors duration-200 text-sm text-center">
+          Contact
+        </a>
+      </div>
     </header>
 
     <script>
@@ -141,6 +162,19 @@ const ogImage = "https://cherkaouihamza.ma/photo-hamza.jpg";
       }
       window.addEventListener('scroll', updateNav, { passive: true });
       updateNav();
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
+      menuBtn?.addEventListener('click', () => {
+        const isOpen = !mobileMenu?.classList.contains('hidden');
+        mobileMenu?.classList.toggle('hidden', isOpen);
+        iconOpen?.classList.toggle('hidden', !isOpen);
+        iconClose?.classList.toggle('hidden', isOpen);
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      });
     </script>
 
     <!-- ── Page content ── -->
