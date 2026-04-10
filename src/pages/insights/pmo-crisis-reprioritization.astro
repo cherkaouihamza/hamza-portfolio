@@ -1,0 +1,445 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Quand tout devient prioritaire : re-priorisation du portefeuille en crise — Hamza Cherkaoui"
+  description="En situation de crise, tout semble urgent et prioritaire. Le rôle du PMO évolue : de la priorisation à la re-priorisation continue sous contrainte."
+>
+
+  <!-- ════════════════════════════════════════
+       HERO IMAGE
+  ════════════════════════════════════════ -->
+  <div class="w-full relative overflow-hidden h-[220px] md:h-[320px]">
+    <!-- Background image -->
+    <img
+      src="/pmo-crisis-reprioritization.png"
+      alt="Quand tout devient prioritaire"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+    />
+    <!-- Dark gradient overlay -->
+    <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(18,41,38,0.3) 0%, rgba(18,41,38,0.85) 100%);"></div>
+
+    <!-- FR/EN Toggle — top right -->
+    <div class="absolute top-4 right-4 flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-1">
+      <button
+        id="btn-fr"
+        onclick="setLang('fr')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 bg-white text-[#1a3a35]"
+      >
+        FR
+      </button>
+      <button
+        id="btn-en"
+        onclick="setLang('en')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 text-white/80 hover:text-white"
+      >
+        EN
+      </button>
+    </div>
+
+    <!-- Content overlay — bottom left -->
+    <div class="absolute bottom-0 left-0 right-0 px-6 pb-8 pt-4 max-w-5xl mx-auto">
+      <!-- Badge + read time -->
+      <div class="flex items-center gap-3 mb-3">
+        <span id="hero-badge-fr" class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/20 border border-[#c9a96e]/30">
+          PMO &amp; IA
+        </span>
+        <span id="hero-badge-en" class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/20 border border-[#c9a96e]/30 hidden">
+          PMO &amp; AI
+        </span>
+        <span class="text-xs text-white/70 flex items-center gap-1.5">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          5 min
+        </span>
+      </div>
+      <!-- FR title -->
+      <h1 id="hero-title-fr" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl">
+        Quand tout devient prioritaire : comment les PMO gèrent la re-priorisation du portefeuille en situation de crise
+      </h1>
+      <!-- EN title -->
+      <h1 id="hero-title-en" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl hidden">
+        When Everything Becomes a Priority: How PMOs Navigate Portfolio Re-Prioritization in Times of Crisis
+      </h1>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       ARTICLE CONTAINER
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Back link -->
+      <div class="mb-10">
+        <a
+          href="/insights"
+          class="inline-flex items-center gap-2 text-sm text-[#64748B] hover:text-[#1a3a35] transition-colors font-medium"
+        >
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          Retour aux Insights
+        </a>
+      </div>
+
+
+      <!-- ── FRENCH VERSION ── -->
+      <article id="content-fr" class="prose-article">
+
+        <div class="article-section">
+          <h2>Introduction</h2>
+          <p>En environnement stable, la priorisation du portefeuille projets est déjà un exercice complexe.</p>
+          <p>En situation de crise, cette complexité augmente considérablement.</p>
+          <p>Changements stratégiques soudains, contraintes budgétaires, tensions sur les ressources et incertitude élevée viennent perturber les équilibres existants.</p>
+          <p>Dans ce contexte, une réalité s'impose :</p>
+          <p class="callout">Tout devient urgent. Tout semble prioritaire.</p>
+          <p>Le rôle du PMO ne se limite plus à prioriser —<br/>il consiste désormais à re-prioriser en continu sous contrainte.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Les limites des approches traditionnelles en situation de crise</h2>
+          <p>Les organisations s'appuient généralement sur :</p>
+          <ul>
+            <li>des comités de gouvernance</li>
+            <li>des modèles de scoring</li>
+            <li>des matrices d'alignement stratégique</li>
+            <li>des revues périodiques</li>
+          </ul>
+          <p>Ces approches montrent leurs limites en contexte de crise :</p>
+          <ul>
+            <li>cycles de décision trop lents</li>
+            <li>modèles statiques rapidement obsolètes</li>
+            <li>données incomplètes ou dépassées</li>
+            <li>processus générant des goulots d'étranglement</li>
+            <li>décisions devenant réactives</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>De la priorisation à la re-priorisation continue</h2>
+          <p>Le véritable changement est le passage à une logique dynamique.</p>
+          <p class="callout">La re-priorisation devient une capacité continue.</p>
+          <p>Cela implique :</p>
+          <ul>
+            <li>une réévaluation permanente de l'alignement stratégique</li>
+            <li>une visibilité en temps réel sur les ressources</li>
+            <li>une capacité à analyser rapidement les impacts</li>
+            <li>des mécanismes de décision accélérés</li>
+          </ul>
+          <p>Le PMO devient alors un orchestrateur de la décision.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Les capacités clés des PMO performants</h2>
+          <p>Les organisations les plus performantes développent :</p>
+          <ul>
+            <li>un alignement stratégique dynamique</li>
+            <li>une visibilité continue sur les ressources</li>
+            <li>une gouvernance simplifiée</li>
+            <li>des responsabilités de décision claires</li>
+            <li>un suivi continu du portefeuille</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>Le rôle de l'IA dans la re-priorisation</h2>
+          <p>L'IA permet de :</p>
+          <ul>
+            <li>analyser des données en temps réel</li>
+            <li>simuler des scénarios</li>
+            <li>évaluer les impacts des décisions</li>
+            <li>détecter les risques</li>
+            <li>améliorer la prise de décision</li>
+          </ul>
+          <p>Elle renforce la capacité à décider rapidement et efficacement.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Repenser la gouvernance</h2>
+          <p>La transformation est aussi organisationnelle :</p>
+          <ul>
+            <li>passer à des décisions en continu</li>
+            <li>responsabiliser les acteurs</li>
+            <li>adopter des modèles adaptatifs</li>
+            <li>s'appuyer sur la donnée</li>
+          </ul>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>La crise ne crée pas la complexité —<br/>elle la révèle.</p>
+          <p>La capacité à re-prioriser devient alors déterminante.</p>
+          <p>Le PMO évolue :</p>
+          <p>d'un rôle de gestion<br/>à un rôle clé dans la prise de décision.</p>
+          <p class="callout">Sommes-nous capables d'adapter nos priorités rapidement, tout en conservant une cohérence stratégique ?</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">À propos</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              J'accompagne les organisations dans la transformation de leur gouvernance PMO et l'intégration de l'IA dans la prise de décision stratégique, notamment en contexte complexe et incertain.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Me contacter
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ── ENGLISH VERSION ── -->
+      <article id="content-en" class="prose-article hidden">
+
+        <div class="article-section">
+          <h2>Introduction</h2>
+          <p>In stable environments, project portfolio prioritization is already a complex discipline.</p>
+          <p>In times of crisis, it becomes exponentially more challenging.</p>
+          <p>Sudden strategic shifts, budget reductions, resource constraints, and increased uncertainty disrupt the equilibrium on which traditional prioritization models rely.</p>
+          <p>In such contexts, organizations face a critical reality:</p>
+          <p class="callout">Everything becomes urgent. Everything appears important.</p>
+          <p>The role of the PMO is therefore no longer limited to prioritization —<br/>it shifts toward continuous re-prioritization under pressure.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Why Traditional Prioritization Models Fail in Crisis Situations</h2>
+          <p>Most organizations rely on structured prioritization frameworks, including:</p>
+          <ul>
+            <li>Governance committees</li>
+            <li>Scoring models</li>
+            <li>Strategic alignment matrices</li>
+            <li>Periodic portfolio reviews</li>
+          </ul>
+          <p>While these approaches are effective in stable contexts, they reveal significant limitations during crises:</p>
+          <ul>
+            <li>Decision cycles are too slow compared to the pace of change</li>
+            <li>Static scoring models become obsolete quickly</li>
+            <li>Data becomes outdated or unreliable</li>
+            <li>Governance processes create bottlenecks</li>
+            <li>Decision-making becomes reactive rather than structured</li>
+          </ul>
+          <p>As a result, organizations struggle to adapt quickly enough.</p>
+          <p>Projects that were previously strategic may no longer be relevant.<br/>New urgent initiatives emerge without clear prioritization criteria.<br/>Resources are reallocated inefficiently.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>From Prioritization to Continuous Re-Prioritization</h2>
+          <p>The fundamental shift in crisis situations lies in moving from a static prioritization mindset to a dynamic one.</p>
+          <p class="callout">Re-prioritization is no longer a periodic exercise —<br/>it becomes a continuous capability.</p>
+          <p>This requires organizations to:</p>
+          <ul>
+            <li>Continuously reassess strategic alignment</li>
+            <li>Maintain real-time visibility on resources and constraints</li>
+            <li>Rapidly evaluate the impact of changes</li>
+            <li>Enable faster and more decentralized decision-making</li>
+          </ul>
+          <p>In this model, the PMO must evolve from a coordination function to a decision orchestration function.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Key Capabilities of High-Performing PMOs in Crisis Contexts</h2>
+          <p>Organizations that manage re-prioritization effectively share several critical capabilities:</p>
+          <ul>
+            <li><strong>Dynamic Strategic Alignment</strong> — The ability to quickly reassess how each initiative contributes to evolving business objectives.</li>
+            <li><strong>Real-Time Resource Visibility</strong> — A clear and updated understanding of resource availability and constraints.</li>
+            <li><strong>Simplified and Accelerated Governance</strong> — Reduced decision layers and faster approval cycles.</li>
+            <li><strong>Clear Decision Ownership</strong> — Defined accountability for prioritization and re-prioritization decisions.</li>
+            <li><strong>Continuous Portfolio Monitoring</strong> — Ongoing tracking of project performance, risks, and dependencies.</li>
+          </ul>
+          <p>These capabilities allow organizations to respond faster while maintaining strategic coherence.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>The Role of AI in Supporting Re-Prioritization</h2>
+          <p>Artificial Intelligence plays a key role in enabling organizations to manage complexity and uncertainty.</p>
+          <p>In crisis situations, AI can support:</p>
+          <ul>
+            <li>Real-time data analysis across multiple sources</li>
+            <li>Scenario simulation to evaluate different prioritization strategies</li>
+            <li>Impact assessment of reallocating resources or delaying initiatives</li>
+            <li>Early detection of risks and bottlenecks</li>
+            <li>Decision support through predictive insights</li>
+          </ul>
+          <p>AI does not replace human judgment.<br/>However, it significantly enhances the speed, quality, and robustness of decision-making.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Reinventing Governance for Uncertain Environments</h2>
+          <p>The integration of AI alone is not sufficient.</p>
+          <p>Organizations must rethink their governance models to support dynamic decision-making:</p>
+          <ul>
+            <li>Move from rigid governance cycles to continuous decision flows</li>
+            <li>Shift from hierarchical validation to empowered decision-making units</li>
+            <li>Replace static frameworks with adaptive prioritization models</li>
+            <li>Align governance with real-time data and insights</li>
+          </ul>
+          <p>This transformation is as much organizational as it is technological.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>Crisis situations do not create complexity —<br/>they reveal it.</p>
+          <p>In such environments, the ability to re-prioritize effectively becomes a critical differentiator.</p>
+          <p>The role of the PMO evolves accordingly:</p>
+          <p>From managing processes<br/>to orchestrating decisions under uncertainty.</p>
+          <p>The key question is no longer:</p>
+          <p><em>What should we prioritize?</em></p>
+          <p>But:</p>
+          <p class="callout">How quickly and effectively can we adapt our priorities while preserving strategic alignment?</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">About</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              I support organizations in redefining PMO governance and integrating AI into strategic decision-making, especially in complex and high-uncertainty environments.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Get in touch
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+</Layout>
+
+
+<style>
+  /* ── Article typography ── */
+  .prose-article { color: #334155; }
+
+  .article-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .prose-article h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a3a35;
+    margin-bottom: 0.875rem;
+    padding-left: 0.875rem;
+    border-left: 3px solid #c9a96e;
+  }
+
+  .prose-article p {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    margin-bottom: 0.875rem;
+    color: #475569;
+  }
+
+  .prose-article ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .prose-article ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .prose-article ul li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c9a96e;
+    flex-shrink: 0;
+    margin-top: 0.525rem;
+  }
+
+  .prose-article .callout {
+    background: linear-gradient(135deg, #1a3a35/5, transparent);
+    border-left: 3px solid #c9a96e;
+    background-color: #1a3a35;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+
+  .prose-article em {
+    color: #1a3a35;
+    font-style: italic;
+  }
+
+  .hidden { display: none !important; }
+</style>
+
+
+<script>
+  function setLang(lang: string) {
+    const fr = document.getElementById('content-fr');
+    const en = document.getElementById('content-en');
+    const btnFr = document.getElementById('btn-fr');
+    const btnEn = document.getElementById('btn-en');
+    const heroFr = document.getElementById('hero-title-fr');
+    const heroEn = document.getElementById('hero-title-en');
+    const badgeFr = document.getElementById('hero-badge-fr');
+    const badgeEn = document.getElementById('hero-badge-en');
+
+    if (!fr || !en || !btnFr || !btnEn || !heroFr || !heroEn) return;
+
+    if (lang === 'fr') {
+      fr.classList.remove('hidden');
+      en.classList.add('hidden');
+      heroFr.classList.remove('hidden');
+      heroEn.classList.add('hidden');
+      badgeFr?.classList.remove('hidden');
+      badgeEn?.classList.add('hidden');
+      btnFr.classList.add('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.remove('text-white/80');
+      btnEn.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.add('text-white/80');
+    } else {
+      en.classList.remove('hidden');
+      fr.classList.add('hidden');
+      heroEn.classList.remove('hidden');
+      heroFr.classList.add('hidden');
+      badgeEn?.classList.remove('hidden');
+      badgeFr?.classList.add('hidden');
+      btnEn.classList.add('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.remove('text-white/80');
+      btnFr.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.add('text-white/80');
+    }
+  }
+
+  // Expose globally for onclick handlers
+  (window as any).setLang = setLang;
+</script>
