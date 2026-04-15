@@ -1,0 +1,520 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Change & Strategy : Pourquoi la plupart des transformations échouent dans l'exécution — Hamza Cherkaoui"
+  description="On parle beaucoup de transformation digitale, de stratégie, d'innovation… Mais sur le terrain, la réalité est souvent très différente."
+>
+
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <div class="w-full relative overflow-hidden h-[220px] md:h-[320px] bg-[#1a3a35]">
+    <!-- Subtle texture overlay -->
+    <div class="absolute inset-0" style="background:linear-gradient(135deg, rgba(201,169,110,0.08) 0%, rgba(18,41,38,0.6) 100%);"></div>
+
+    <!-- FR/EN Toggle — top right -->
+    <div class="absolute top-4 right-4 flex items-center gap-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-1" style="z-index:10;">
+      <button
+        id="btn-fr"
+        onclick="setLang('fr')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 bg-white text-[#1a3a35]"
+      >
+        FR
+      </button>
+      <button
+        id="btn-en"
+        onclick="setLang('en')"
+        class="px-4 py-1.5 rounded-lg text-sm font-semibold transition-all duration-200 text-white/80 hover:text-white"
+      >
+        EN
+      </button>
+    </div>
+
+    <!-- Content overlay — bottom left -->
+    <div class="absolute bottom-0 left-0 right-0 px-6 pb-8 pt-4 max-w-5xl mx-auto">
+      <!-- Badge + read time -->
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full text-[#c9a96e] bg-[#c9a96e]/20 border border-[#c9a96e]/30">
+          Change &amp; Strategy
+        </span>
+        <span class="text-xs text-white/70 flex items-center gap-1.5">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          7 min
+        </span>
+      </div>
+      <!-- FR title -->
+      <h1 id="hero-title-fr" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl">
+        Change &amp; Strategy : Pourquoi la plupart des transformations échouent dans l'exécution
+      </h1>
+      <!-- EN title -->
+      <h1 id="hero-title-en" class="text-2xl md:text-3xl font-bold text-white leading-snug max-w-3xl hidden">
+        Change &amp; Strategy: Why Most Transformations Fail in Execution
+      </h1>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       ARTICLE CONTAINER
+  ════════════════════════════════════════ -->
+  <section class="bg-[#f8f8f6] py-16 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Back link -->
+      <div class="mb-10">
+        <a
+          href="/insights"
+          class="inline-flex items-center gap-2 text-sm text-[#64748B] hover:text-[#1a3a35] transition-colors font-medium"
+        >
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          Retour aux Insights
+        </a>
+      </div>
+
+
+      <!-- ── FRENCH VERSION ── -->
+      <article id="content-fr" class="prose-article">
+
+        <div class="article-section">
+          <p>On parle beaucoup de transformation digitale, de stratégie, d'innovation…</p>
+          <p>Mais sur le terrain, la réalité est souvent différente.</p>
+          <ul>
+            <li>des projets bien conçus qui n'aboutissent pas</li>
+            <li>des outils performants qui ne sont pas utilisés</li>
+            <li>des équipes alignées en apparence… mais pas réellement engagées</li>
+          </ul>
+          <p>Avec le temps, une chose devient évidente :<br/>le problème n'est presque jamais la stratégie.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Le vrai sujet : la capacité à changer</h2>
+          <p>Dans beaucoup d'organisations, le changement est encore traité comme un projet classique :</p>
+          <ul>
+            <li>un planning</li>
+            <li>des livrables</li>
+            <li>des indicateurs</li>
+          </ul>
+          <p>Mais le changement, ce n'est pas un projet.</p>
+          <p>C'est une transformation du fonctionnement réel de l'organisation :</p>
+          <ul>
+            <li>ses habitudes</li>
+            <li>ses équilibres</li>
+            <li>ses modes de décision</li>
+          </ul>
+          <p>Et cela ne se pilote pas uniquement avec un Gantt.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Tous les changements ne se ressemblent pas</h2>
+          <p>Une erreur fréquente consiste à appliquer la même approche à tous les projets de transformation.</p>
+          <p>En réalité, il existe plusieurs formes de changement :</p>
+          <ul>
+            <li>des évolutions progressives</li>
+            <li>des transformations profondes</li>
+            <li>des ruptures rapides</li>
+            <li>des ajustements continus</li>
+          </ul>
+          <p class="callout">Choisir la bonne approche dès le départ change complètement la suite.</p>
+          <p>Ce point est notamment abordé dans <em>Exploring Strategic Change</em>, qui insiste sur l'importance du contexte dans la manière de conduire une transformation.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Avant d'agir : comprendre le terrain</h2>
+          <p>On veut souvent aller vite. Lancer. Produire.</p>
+          <p>Mais dans les transformations, aller trop vite au début fait souvent perdre du temps après.</p>
+          <p>Les bonnes questions sont simples :</p>
+          <ul>
+            <li>Les équipes sont-elles prêtes ?</li>
+            <li>Le changement est-il compris ?</li>
+            <li>Qui influence réellement les décisions ?</li>
+          </ul>
+          <p>Ce travail de diagnostic est souvent négligé, alors qu'il fait toute la différence.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Le facteur humain, toujours sous-estimé</h2>
+          <p>On investit facilement dans :</p>
+          <ul>
+            <li>des outils</li>
+            <li>des plateformes</li>
+            <li>des expertises externes</li>
+          </ul>
+          <p>Mais beaucoup moins dans :</p>
+          <ul>
+            <li>l'accompagnement</li>
+            <li>la pédagogie</li>
+            <li>l'adhésion</li>
+          </ul>
+          <p class="callout">Et pourtant, c'est là que tout se joue.</p>
+          <p>Un projet peut être techniquement parfait…<br/>s'il n'est pas adopté, il n'existe pas.</p>
+          <p>Dans <em>Switch</em>, les auteurs montrent que le changement repose à la fois sur la logique, l'émotion et l'environnement.<br/>Dans la pratique, on se concentre souvent uniquement sur la logique.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>La résistance n'est pas un problème</h2>
+          <p>On cherche souvent à "gérer la résistance".</p>
+          <p>Mais en réalité, la résistance est rarement le vrai problème.</p>
+          <p class="callout">C'est un signal.</p>
+          <p>Elle peut traduire :</p>
+          <ul>
+            <li>un manque de clarté</li>
+            <li>une crainte légitime</li>
+            <li>ou une difficulté d'adaptation</li>
+          </ul>
+          <p>L'ignorer, c'est prendre le risque d'un rejet silencieux.</p>
+          <p>C'est une idée également développée dans <em>Exploring Strategic Change</em>, qui insiste sur l'importance de comprendre les dynamiques internes.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Le rôle clé qu'on oublie souvent</h2>
+          <p>Entre la stratégie et l'exécution, il existe un niveau souvent sous-estimé :</p>
+          <p class="callout">le management intermédiaire</p>
+          <p>Ce sont eux qui :</p>
+          <ul>
+            <li>traduisent la stratégie</li>
+            <li>expliquent le changement</li>
+            <li>influencent les équipes au quotidien</li>
+          </ul>
+          <p>S'ils ne sont pas alignés, la transformation ralentit…<br/>ou avance sans jamais s'ancrer.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Le rôle du PMO aujourd'hui</h2>
+          <p>Pendant longtemps, le PMO était surtout là pour :</p>
+          <ul>
+            <li>suivre</li>
+            <li>structurer</li>
+            <li>reporter</li>
+          </ul>
+          <p>Aujourd'hui, ce n'est plus suffisant.</p>
+          <p>Dans les transformations, le PMO devient :</p>
+          <ul>
+            <li>un facilitateur</li>
+            <li>un orchestrateur</li>
+            <li>un garant de la cohérence</li>
+          </ul>
+          <p class="callout">Il ne suit plus seulement les projets.<br/>Il aide l'organisation à changer.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Ce qui fait vraiment la différence</h2>
+          <p>Les transformations qui réussissent ont souvent les mêmes caractéristiques :</p>
+          <ul>
+            <li>elles prennent le temps de comprendre le contexte</li>
+            <li>elles adaptent leur approche</li>
+            <li>elles impliquent les bonnes personnes</li>
+            <li>elles ajustent en continu</li>
+          </ul>
+          <p class="callout">Et surtout : elles ne sous-estiment pas l'humain.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>On peut avoir la meilleure stratégie, les meilleurs outils, les meilleurs experts…</p>
+          <p>Si l'organisation n'est pas prête, rien ne tient.</p>
+          <p>Changer, ce n'est pas décider.<br/>C'est faire évoluer des comportements.</p>
+          <p class="callout">Et c'est probablement la partie la plus difficile.</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">À propos</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              J'accompagne les organisations dans la transformation de leur gouvernance PMO et l'intégration de l'IA dans la prise de décision stratégique, notamment en contexte complexe et incertain.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Me contacter
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+
+      <!-- ── ENGLISH VERSION ── -->
+      <article id="content-en" class="prose-article hidden">
+
+        <div class="article-section">
+          <p>We hear a lot about digital transformation, strategy, innovation…</p>
+          <p>But on the ground, the reality is often very different.</p>
+          <ul>
+            <li>well-designed projects that don't deliver real impact</li>
+            <li>powerful tools that are barely used</li>
+            <li>teams that seem aligned… but are not truly engaged</li>
+          </ul>
+          <p>Over time, one thing becomes clear:<br/>the problem is almost never the strategy.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>The real issue: the ability to change</h2>
+          <p>In many organizations, change is still treated like a standard project:</p>
+          <ul>
+            <li>a timeline</li>
+            <li>deliverables</li>
+            <li>KPIs</li>
+          </ul>
+          <p>But change is not just a project.</p>
+          <p>It's a shift in how the organization actually operates:</p>
+          <ul>
+            <li>its habits</li>
+            <li>its internal balance</li>
+            <li>its decision-making patterns</li>
+          </ul>
+          <p>And that cannot be managed with a Gantt chart alone.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Not all change is the same</h2>
+          <p>One of the most common mistakes is applying the same approach to every transformation.</p>
+          <p>In reality, change comes in different forms:</p>
+          <ul>
+            <li>gradual improvements</li>
+            <li>deep transformations</li>
+            <li>rapid shifts</li>
+            <li>continuous adjustments</li>
+          </ul>
+          <p class="callout">Choosing the right approach from the start makes all the difference.</p>
+          <p>This idea is highlighted in <em>Exploring Strategic Change</em>, which emphasizes that context should drive how change is managed.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Before acting: understand the context</h2>
+          <p>There is always pressure to move fast. Launch. Deliver.</p>
+          <p>But in transformation programs, moving too fast at the beginning often slows everything down later.</p>
+          <p>The right questions are simple:</p>
+          <ul>
+            <li>Are people ready for this change?</li>
+            <li>Is the purpose clearly understood?</li>
+            <li>Who actually influences decisions?</li>
+          </ul>
+          <p>This diagnostic step is often skipped — yet it's critical.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>The human factor: still underestimated</h2>
+          <p>Organizations invest heavily in:</p>
+          <ul>
+            <li>tools</li>
+            <li>platforms</li>
+            <li>external expertise</li>
+          </ul>
+          <p>But much less in:</p>
+          <ul>
+            <li>adoption</li>
+            <li>communication</li>
+            <li>alignment</li>
+          </ul>
+          <p class="callout">And that's where success or failure is decided.</p>
+          <p>A project can be technically perfect…<br/>if it's not adopted, it doesn't exist.</p>
+          <p>In <em>Switch</em>, the authors explain that change requires aligning logic, emotion, and environment.<br/>In practice, most organizations focus only on logic.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Resistance is not the problem</h2>
+          <p>Resistance is often seen as something to manage.</p>
+          <p>In reality, it's a signal.</p>
+          <p class="callout">It may reflect a lack of clarity, perceived risk, or difficulty adapting.</p>
+          <p>Ignoring it often leads to silent rejection.</p>
+          <p>This perspective is also discussed in <em>Exploring Strategic Change</em>, which highlights the importance of understanding internal dynamics.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>The missing link: middle management</h2>
+          <p>Between strategy and execution, there is a level often underestimated:</p>
+          <p class="callout">middle management</p>
+          <p>They:</p>
+          <ul>
+            <li>translate strategy into action</li>
+            <li>explain change</li>
+            <li>influence teams daily</li>
+          </ul>
+          <p>If they are not aligned, transformation slows down…<br/>or moves forward without ever sticking.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>The evolving role of the PMO</h2>
+          <p>For a long time, PMOs focused on:</p>
+          <ul>
+            <li>tracking</li>
+            <li>structuring</li>
+            <li>reporting</li>
+          </ul>
+          <p>Today, that's no longer enough.</p>
+          <p>In transformation contexts, the PMO becomes:</p>
+          <ul>
+            <li>a facilitator</li>
+            <li>an orchestrator</li>
+            <li>a driver of alignment</li>
+          </ul>
+          <p class="callout">It doesn't just track change.<br/>It helps make it happen.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>What really makes the difference</h2>
+          <p>Successful transformations often share the same traits:</p>
+          <ul>
+            <li>they take time to understand the context</li>
+            <li>they adapt their approach</li>
+            <li>they involve the right people</li>
+            <li>they adjust along the way</li>
+          </ul>
+          <p class="callout">And most importantly: they don't underestimate the human side.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Conclusion</h2>
+          <p>You can have the best strategy, the best tools, the best experts…</p>
+          <p>If the organization is not ready, nothing sticks.</p>
+          <p>Change is not about deciding.<br/>It's about shifting behaviors.</p>
+          <p class="callout">And that is the hardest part.</p>
+        </div>
+
+        <!-- Author note -->
+        <div class="mt-12 border-t border-[#E2E8F0] pt-8">
+          <div class="bg-[#1a3a35]/5 rounded-2xl p-6 flex flex-col gap-2">
+            <p class="text-xs font-bold uppercase tracking-widest text-[#c9a96e]">About</p>
+            <p class="text-sm text-[#64748B] leading-relaxed">
+              I support organizations in redefining PMO governance and integrating AI into strategic decision-making, especially in complex and high-uncertainty environments.
+            </p>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 mt-2 text-sm font-semibold text-[#1a3a35] hover:text-[#c9a96e] transition-colors"
+            >
+              Get in touch
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+</Layout>
+
+
+<style>
+  /* ── Article typography ── */
+  .prose-article { color: #334155; }
+
+  .article-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .prose-article h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a3a35;
+    margin-bottom: 0.875rem;
+    padding-left: 0.875rem;
+    border-left: 3px solid #c9a96e;
+  }
+
+  .prose-article p {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    margin-bottom: 0.875rem;
+    color: #475569;
+  }
+
+  .prose-article ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .prose-article ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .prose-article ul li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c9a96e;
+    flex-shrink: 0;
+    margin-top: 0.525rem;
+  }
+
+  .prose-article .callout {
+    border-left: 3px solid #c9a96e;
+    background-color: #1a3a35;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+
+  .prose-article em {
+    color: #1a3a35;
+    font-style: italic;
+  }
+
+  .hidden { display: none !important; }
+</style>
+
+
+<script>
+  function setLang(lang: string) {
+    const fr = document.getElementById('content-fr');
+    const en = document.getElementById('content-en');
+    const btnFr = document.getElementById('btn-fr');
+    const btnEn = document.getElementById('btn-en');
+    const heroFr = document.getElementById('hero-title-fr');
+    const heroEn = document.getElementById('hero-title-en');
+
+    if (!fr || !en || !btnFr || !btnEn || !heroFr || !heroEn) return;
+
+    if (lang === 'fr') {
+      fr.classList.remove('hidden');
+      en.classList.add('hidden');
+      heroFr.classList.remove('hidden');
+      heroEn.classList.add('hidden');
+      btnFr.classList.add('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.remove('text-white/80');
+      btnEn.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.add('text-white/80');
+    } else {
+      en.classList.remove('hidden');
+      fr.classList.add('hidden');
+      heroEn.classList.remove('hidden');
+      heroFr.classList.add('hidden');
+      btnEn.classList.add('bg-white', 'text-[#1a3a35]');
+      btnEn.classList.remove('text-white/80');
+      btnFr.classList.remove('bg-white', 'text-[#1a3a35]');
+      btnFr.classList.add('text-white/80');
+    }
+  }
+
+  // Expose globally for onclick handlers
+  (window as any).setLang = setLang;
+</script>
